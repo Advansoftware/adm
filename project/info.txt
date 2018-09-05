@@ -1,0 +1,14 @@
+*****************	Servidor ftp   **********************
+**			                                   ** 
+**   Host de FTP: ftp.camarabrazopolis.mg.gov.br           **
+**    						           **
+**   Usuário de FTP: camarabrazopolis1               	   **
+**   Senha: camara2017		                      	   **
+**				                      	   **
+****************	Acesso Locaweb   ********************
+**							   **
+**	usuario: acrsolucoes				   **
+**							   **
+**	senha: casy130806				   **
+**							   **
+*************************************************************
