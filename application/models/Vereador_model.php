@@ -33,10 +33,11 @@
  		}
  		//para os pedidos por vereadores
 
- 		public function get_ano(){
- 			$query = $this->db->query("SELECT YEAR(p.data_publicacao) as ano FROM pedidos p GROUP BY 1 ORDER by 1 desc");
- 			return $query->result_array();
- 		}
+ 		public function get_ano()
+        {
+            $query = $this->db->query("SELECT YEAR(p.data_publicacao) as ano FROM pedidos p GROUP BY 1 ORDER by 1 desc");
+            return $query->result_array();
+        }
 	}
 
 ?>

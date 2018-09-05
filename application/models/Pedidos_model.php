@@ -10,15 +10,22 @@
 				from pedidos p INNER JOIN vereador_pedido vp on p.id = vp.id_pedido
 				INNER JOIN vereadores v on v.id = vp.id_vereador order by p.id desc limit 10");
 			return $query->result_array();
-		}/*
-		public function set_pedido($vereadores,$arquivo,$nome,$data){
-			$data = Array(
+		}
+		public function set_pedido($nome,$datas,$arquivo){
+		    $data = array(
+                'nome' => $nome,
+                'data_publicacao' => $datas,
+                'arquivo' => $arquivo
+            );
+		    $this->db->insert('pedidos',$data);
+		}
+		public function get_id_arquivo($arquivo){
+        $query = $this->db->query("select id from pedidos where arquivo='".$arquivo."'");
+		    return $query->row_array();
+        }
+        public function set_vereador_pedidosByid($idvereador, $idpedido){
+		    $this->db->query("insert into vereador_pedido (id_vereador, id_pedido) values(".$this->db->escape($idvereador).",".$this->db->escape($idpedido).")");
+        }
 
-			);
-			foreach ($vereadores as $vereador) {
-
-				$this->db->insert('',$data)
-			}
-		}*/
 	}
 ?>

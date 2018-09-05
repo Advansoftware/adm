@@ -18,12 +18,53 @@ class Pedidos extends Geral {
 		$this->load->view('pedidos/float_button');
 	}
 	public function cria_pedido(){
-		$vereador = $this->input->post('vereador');
-		$arquivo = $this->input->post('arquivo');
+		$vereador = $this->input->post('vereadores');
 		$nome = $this->input->post('nome');
 		$data = $this->convert_date($this->input->post('data'), "en");
-		$this->Pedidos_model->set_pedido($vereador,$arquivo,$nome,$data);
-		
-	}
+        $ver = explode(',', $vereador);
+        //upload file
+        $config['upload_path'] = '../camara/content/pedidos_de_providencia/';
+        $config['allowed_types'] = '*';
+        $config['max_filename'] = '255';
+        $config['file_name'] = $vereador."_".$_FILES['arquivo']['name'];
+        $config['max_size'] = '51200'; //50 MB
+
+        if(isset($_FILES['arquivo']['name']))
+        {
+            if(0 < $_FILES['arquivo']['error'])
+            {
+                echo 'Erro ao enviar o arquivo';
+            }
+            else
+            {
+                if(file_exists("../camara/content/pedidos_de_providencia/".$vereador."_".$_FILES['arquivo']['name']))
+                {
+                    echo "Arquivo Ja Existe.";
+                }
+                else
+                {
+                    $this->load->library('upload', $config);
+                    if (!$this->upload->do_upload('arquivo'))
+                    {
+                        echo $this->upload->display_errors();
+                    }
+                    else
+                    {
+                        $arquivo = $vereador."_".$_FILES['arquivo']['name'];
+                        echo $arquivo;
+                        $this->Pedidos_model->set_pedido($nome,$data,$arquivo);
+                        $get_id_arquivo = $this->Pedidos_model->get_id_arquivo($arquivo);
+                        foreach ($ver as $vereadores) {
+                            $this->Pedidos_model->set_vereador_pedidosByid($vereadores, $get_id_arquivo['id']);
+                            echo "enviado com sucesso.";
+                        }
+                    }
+                }
+            }
+        } else {
+            echo 'Por Favor escolha um arquivo';
+        }
+    }
+
 }
 ?>

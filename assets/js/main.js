@@ -1,7 +1,8 @@
 var Main = {
-	base_url : "http://" + window.location.host + "/sessoes/",
+	base_url : "http://" + window.location.host + "/adm/",
 	carrega : function(){
 		$(".dropdown-trigger").dropdown();
+        $('#numero').mask('00/0000', {reverse: true});
 	    $('select').formSelect();
 	    $('.datepicker').datepicker({
 		i18n: {
@@ -28,23 +29,28 @@ var Main = {
 	envia_pedido : function(){
 
 		var vereadores = $("#vereadores").val();
-		var nome_arquivo = $("#nome").val() + ".pdf";
 		var nome_pedido = "Pedido de Providência: " + $("#numero").val();
 		var data_pedido  = $("#data").val();
-		$.ajax({
-			method: "POST",
-			url : Main.base_url+"pedidos/cria_pedido",
-			data : { 
-				vereador : vereadores,
-				arquivo : nome_arquivo,
-				nome : nome_pedido,
-				data : data_pedido
-			 }
-
-		}).done(function(html){
-			console.log("Sucess");
-    		$( "#results" ).append(html);
-
-		});
+        var file_data = $('#file').prop('files')[0];
+        var fd = new FormData();
+        fd.append('arquivo',file_data);
+        fd.append('vereadores',vereadores);
+        fd.append('data',data_pedido);
+        fd.append('nome',nome_pedido);
+        if(vereadores != '' && nome_pedido != '' && data_pedido != '') {
+            $.ajax({
+                method: "POST",
+                url: Main.base_url + "pedidos/cria_pedido",
+                dataType: 'text',
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: fd,
+                type: 'post'
+            }).done(function (html) {
+                location.reload();
+            });
+        }
 	}
 }
+

@@ -1,4 +1,5 @@
 <div class="container mt-2">
+<form method="post" enctype="multipart/form-data"></form>
 	<div class="row grey lighten-4">
 		<div class="col m6 s12 offset-m1">
 
@@ -30,16 +31,17 @@
 			<div class="file-field input-field col s12">
 				<div class="btn orange lighten-1">
 					<span>Arquivo</span>
-					<input type="file">
+                    <input type="file" id="file" name="arquivo">
 				</div>
 				<div class="file-path-wrapper">
 					<input class="file-path validate" type="text">
 				</div>
 			</div>
 		</div>
+    </div>
+</form>
+</div>
 
-</div>
-</div>
 <div id="results">
 	
 </div>
