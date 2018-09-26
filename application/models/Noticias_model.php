@@ -6,17 +6,10 @@
 				$this->load->database();
 			}
 
-		public function get_noticias($limite = null, $offset = null)
+		public function set_noticias($titulo, $texto, $data, $foto)
 		{
-			if($limite){
-				$this->db->limit($limite, $offset);
-			}
-			$this->db->select('*');
-			$this->db->order_by("data", "desc");
-			return $this->db->get('noticias')->result();
-		}	
-		public function countAll(){
-			return $this->db->count_all('noticias');
+
+			$this->db->query("INSERT INTO noticias (titulo, texto, data, foto)values(".$this->db->escape($titulo).",". $this->db->escape($texto).",". $this->db->escape($data).",". $this->db->escape($foto).")");
 		}
 	}
 ?>

@@ -1,48 +1,48 @@
-<div class="container clearfix mb-5">
-      <h1 class="display-4 text-center">Notícias</h1>
-  <div class="row">
+<div class="container">
+    <div class="row">
+        <h2 class="center">Inserir Noticias</h2>
+        <div class="col m12 mt-3  grey lighten-4">
+            <h5 class="center">Complete os dados abaixo.</h5>
+            <div class="row">
+                <div class="input-field col s8">
+                    <input placeholder="Titulo" id="titulo" name="titulo" type="text" class="validate">
+                    <label for="titulo">Titulo</label>
+                </div>
 
-    <div class="col-md-10">
-      <div class="row w-100 mx-auto">
-
-        <div class="card w-100">
-          <div class="card-header text-center">
-            <h5>Mais Notícias</h5>
-          </div>
-          <div class="card-body">
-            <div id="accordion" role="tablist">
-              <?php
-                for($i = 0; $i<count($noticias); $i++){
-                  $titulo = $noticias[$i]->titulo;
-                  $id = $noticias[$i]->id;
-                  $noticia = $noticias[$i]->texto;
-                  $data = $noticias[$i]->data;
-                  $mes = date( 'm', strtotime($data));
-                  $ano = date( 'Y', strtotime($data));
-                  $imagem = (isset($noticias[$i]->foto)) ? $imagem = "<img class='img-fluid' src=".base_url()."content/noticias/".$ano."/".$mes."/".$noticias[$i]->foto.">" : null;
-        
-                  $pag = <<<EOPAGE
-                  <div class="card">
-                    <div class="card-header" role="tab" id="headingOne$id">
-                      <h5 class="mb-0">
-                        <a data-toggle="collapse" href="#collapseOne$id" aria-expanded="true" aria-controls="collapseOne$id">
-                           $titulo
-                        </a>
-                      </h5>
-                    </div>
-                    <div id="collapseOne$id" class="collapse" role="tabpanel" aria-labelledby="headingOne$id" data-parent="#accordion">
-                        <div class="card-body text-justify">
-                 		 $imagem <br/>
-                          $noticia
-                        </div>
-                      </div>
-                    </div>
-EOPAGE;
-                  echo $pag;
-                }
-                echo $pagination;
-              ?>
+                <div class="input-field col s4">
+                    <input type="text" class="datepicker" id="data" name="data" placeholder="Data Publicação">
+                </div>
             </div>
-          </div>
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>Arquivo</span>
+                    <input type="file" id="file" name="arquivo">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" required placeholder="Foto Destaque" type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
 
+        <div class="col mt-3">
+            <textarea name="texto" id="texto"></textarea>
+            <script>
+                CKEDITOR.replace( 'texto' );
+            </script>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col m6">
 
+            <button class="btn waves-effect blue darken-1 waves-light" type="submit" name="action" onclick="Main.envia_noticia();">Enviar Dados
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+            <div class="col m6">
+                <button class="btn waves-effect offset-m10 waves-light right red darken-3" type="submit" name="action">Cancelar
+                    <i class="material-icons right">close</i>
+                </button>
+            </div>
+</div>

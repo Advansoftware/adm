@@ -51,6 +51,31 @@ var Main = {
                 location.reload();
             });
         }
+	},
+	envia_noticia : function(){
+        var titulo = $("#titulo").val();
+        var data = $("#data").val();
+        var texto = CKEDITOR.instances.texto.getData();
+        var file_data = $('#file').prop('files')[0];
+        var fd = new FormData();
+        fd.append('arquivo',file_data);
+        fd.append('titulo',titulo);
+        fd.append('data',data);
+        fd.append('texto',texto);
+        if(titulo != '' && data != '' && file_data != ''  && texto != '') {
+            $.ajax({
+                method: "POST",
+                url: Main.base_url + "noticias/insere_noticia",
+                dataType: 'text',
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: fd,
+                type: 'post'
+            }).done(function (html) {
+                location.reload();
+            });
+		}
 	}
 }
 
