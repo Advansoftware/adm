@@ -9,15 +9,24 @@ class Noticias extends Geral {
        $this->load->model('Noticias_model');
     }
     public function index(){
+
+    }
+    public function create(){
         $this->inicio();
-        $this->load->view('noticias/noticias');
+        $this->load->view('noticias/create');
+        $this->load->view('pedidos/float_button');
+    }
+    public function edit($id = null){
+        $data["noticia"] = $this->Noticias_model->get_noticiaById($id);
+        $this->inicio($data);
+        $this->load->view('noticias/edit');
         $this->load->view('pedidos/float_button');
     }
     public function insere_noticia(){
        $titulo = $this->input->post('titulo');
        $data = $this->convert_date($this->input->post('data'), "en");
        $texto = $this->input->post('texto');
-        $config['upload_path'] = '../camara/content/noticias/';
+        $config['upload_path'] = '../camara/content/noticias/destaque';
         $config['allowed_types'] = '*';
         $config['max_filename'] = '255';
         $config['file_name'] = $titulo."_".$_FILES['arquivo']['name'];
@@ -31,7 +40,7 @@ class Noticias extends Geral {
             }
             else
             {
-                if(file_exists("../camara/content/noticias/".$titulo."_".$_FILES['arquivo']['name']))
+                if(file_exists("../camara/content/noticias/destaque".$titulo."_".$_FILES['arquivo']['name']))
                 {
                     echo "Arquivo Ja Existe.";
                 }
