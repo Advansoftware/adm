@@ -2,368 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2c9ee86-4769-42bd-b5a3-e13b3c30fbfc" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/application/views/noticias/edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/noticias/noticias.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/noticias/noticias.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/template/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/template/head.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ckeditor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/contents.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/af.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/ar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/az.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/bg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/bn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/bs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/cs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/cy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/da.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/de-ch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/el.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/en-au.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/en-ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/en-gb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/eo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/es-mx.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/et.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/eu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/fa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/fi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/fo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/fr-ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/gl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/gu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/he.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/hi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/hr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/hu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/id.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/is.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/it.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/ja.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/ka.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/km.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/ko.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/ku.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/lt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/lv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/mk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/mn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/ms.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/nb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/no.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/oc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/pl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/pt-br.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/pt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/ro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/si.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/sk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/sl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/sq.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/sr-latn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/sr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/sv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/th.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/tr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/tt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/ug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/uk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/vi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/zh-cn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/lang/zh.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/a11yhelp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/af.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/ar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/az.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/bg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/cs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/cy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/da.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/de-ch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/el.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/en-au.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/en-gb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/eo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/es-mx.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/et.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/eu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/fa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/fi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/fo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/fr-ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/gl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/gu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/he.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/hi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/hr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/hu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/id.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/it.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/ja.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/km.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/ko.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/ku.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/lt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/lv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/mk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/mn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/nb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/no.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/oc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/pl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/pt-br.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/pt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/ro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/si.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/sk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/sl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/sq.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/sr-latn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/sr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/sv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/th.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/tr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/tt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/ug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/uk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/vi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/zh-cn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/a11yhelp/dialogs/lang/zh.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/about/dialogs/about.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/about/dialogs/hidpi/logo_ckeditor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/about/dialogs/logo_ckeditor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/balloonpanel/skins/kama/balloonpanel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/balloonpanel/skins/moono-lisa/balloonpanel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/balloonpanel/skins/moono-lisa/images/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/balloonpanel/skins/moono-lisa/images/hidpi/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/balloonpanel/skins/moono/balloonpanel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/balloonpanel/skins/moono/images/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/balloonpanel/skins/moono/images/hidpi/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/balloontoolbar/skins/default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/balloontoolbar/skins/kama/balloontoolbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/balloontoolbar/skins/moono-lisa/balloontoolbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/balloontoolbar/skins/moono/balloontoolbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/clipboard/dialogs/paste.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/colordialog/dialogs/colordialog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/colordialog/dialogs/colordialog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/copyformatting/cursors/cursor-disabled.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/copyformatting/cursors/cursor.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/copyformatting/styles/copyformatting.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/dialog/dialogDefinition.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/div/dialogs/div.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/easyimage/dialogs/easyimagealt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/easyimage/styles/easyimage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/find/dialogs/find.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/flash/dialogs/flash.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/flash/images/placeholder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/forms/dialogs/button.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/forms/dialogs/checkbox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/forms/dialogs/form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/forms/dialogs/hiddenfield.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/forms/dialogs/radio.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/forms/dialogs/select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/forms/dialogs/textarea.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/forms/dialogs/textfield.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/forms/images/hiddenfield.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/icons_hidpi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/iframe/dialogs/iframe.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/iframe/images/placeholder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/image/dialogs/image.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/image/images/noimage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/imagebase/styles/imagebase.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/link/dialogs/anchor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/link/dialogs/link.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/link/images/anchor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/link/images/hidpi/anchor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/liststyle/dialogs/liststyle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/magicline/images/hidpi/icon-rtl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/magicline/images/hidpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/magicline/images/icon-rtl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/magicline/images/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/pagebreak/images/pagebreak.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/pastefromword/filter/default.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/preview/preview.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/scayt/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/scayt/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/scayt/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/scayt/dialogs/dialog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/scayt/dialogs/options.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/scayt/dialogs/toolbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/scayt/skins/moono-lisa/scayt.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/showblocks/images/block_address.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/showblocks/images/block_blockquote.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/showblocks/images/block_div.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/showblocks/images/block_h1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/showblocks/images/block_h2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/showblocks/images/block_h3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/showblocks/images/block_h4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/showblocks/images/block_h5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/showblocks/images/block_h6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/showblocks/images/block_p.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/showblocks/images/block_pre.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/dialogs/smiley.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/angel_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/angel_smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/angry_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/angry_smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/broken_heart.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/broken_heart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/confused_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/confused_smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/cry_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/cry_smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/devil_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/devil_smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/embaressed_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/embarrassed_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/embarrassed_smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/envelope.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/envelope.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/heart.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/heart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/kiss.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/kiss.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/lightbulb.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/lightbulb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/omg_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/omg_smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/regular_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/regular_smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/sad_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/sad_smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/shades_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/shades_smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/teeth_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/teeth_smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/thumbs_down.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/thumbs_down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/thumbs_up.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/thumbs_up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/tongue_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/tongue_smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/tounge_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/whatchutalkingabout_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/whatchutalkingabout_smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/wink_smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/smiley/images/wink_smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/_translationstatus.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/af.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/ar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/az.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/bg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/cs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/cy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/da.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/de-ch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/el.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/en-au.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/en-ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/en-gb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/eo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/es-mx.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/et.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/eu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/fa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/fi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/fr-ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/gl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/he.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/hr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/hu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/id.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/it.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/ja.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/km.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/ko.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/ku.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/lt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/lv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/nb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/no.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/oc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/pl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/pt-br.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/pt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/ro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/si.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/sk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/sl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/sq.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/sv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/th.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/tr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/tt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/ug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/uk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/vi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/zh-cn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/lang/zh.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/specialchar/dialogs/specialchar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/table/dialogs/table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/tableselection/styles/tableselection.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/tabletools/dialogs/tableCell.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/templates/dialogs/templates.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/templates/dialogs/templates.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/templates/templates/default.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/templates/templates/images/template1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/templates/templates/images/template2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/templates/templates/images/template3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/widget/images/handle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/wsc/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/wsc/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/wsc/dialogs/ciframe.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/wsc/dialogs/tmpFrameset.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/wsc/dialogs/wsc.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/wsc/dialogs/wsc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/wsc/dialogs/wsc_ie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/wsc/skins/moono-lisa/wsc.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/dialog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/dialog_ie.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/dialog_ie8.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/dialog_iequirks.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/editor.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/editor_gecko.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/editor_ie.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/editor_ie8.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/editor_iequirks.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/icons_hidpi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/images/arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/images/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/images/hidpi/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/images/hidpi/lock-open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/images/hidpi/lock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/images/hidpi/refresh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/images/lock-open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/images/lock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/images/refresh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/images/spinner.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/skins/moono-lisa/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Noticias.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Noticias.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Noticias_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Noticias_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/noticias/noticias.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/noticias/create.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -415,9 +58,11 @@
     <session id="-539926839">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.53" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -429,26 +74,26 @@
         <counts>
           <entry key="css" value="1" />
           <entry key="js" value="2" />
-          <entry key="php" value="18" />
+          <entry key="php" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
           <entry key="JavaScript" value="2" />
-          <entry key="PHP" value="18" />
+          <entry key="PHP" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="js" value="338" />
-          <entry key="php" value="1422" />
+          <entry key="php" value="1959" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="338" />
-          <entry key="PHP" value="1421" />
+          <entry key="PHP" value="1958" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
@@ -459,17 +104,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Noticias.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+            <state relative-caret-position="221">
+              <caret line="19" column="22" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Pedidos.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/noticias/edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="22" column="70" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="70" />
+            <state relative-caret-position="238">
+              <caret line="12" column="122" selection-start-line="12" selection-start-column="122" selection-end-line="12" selection-end-column="122" />
             </state>
           </provider>
         </entry>
@@ -486,26 +131,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/Noticias_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="207" selection-start-line="11" selection-start-column="207" selection-end-line="11" selection-end-column="207" />
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/noticias/noticias.php">
+        <entry file="file://$PROJECT_DIR$/application/models/Sessoes_camara_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="117" selection-start-line="33" selection-start-column="117" selection-end-line="33" selection-end-column="117" />
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/template/head.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/noticias/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="24" column="102" selection-start-line="24" selection-start-column="102" selection-end-line="24" selection-end-column="102" />
+            <state relative-caret-position="561">
+              <caret line="33" column="117" selection-start-line="33" selection-start-column="117" selection-end-line="33" selection-end-column="117" />
             </state>
           </provider>
         </entry>
@@ -527,7 +172,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
+            <state relative-caret-position="1343">
               <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
             </state>
           </provider>
@@ -552,11 +197,12 @@
         <option value="$PROJECT_DIR$/application/models/Pedidos_model.php" />
         <option value="$PROJECT_DIR$/application/controllers/Pedidos.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/main.js" />
-        <option value="$PROJECT_DIR$/application/controllers/Noticias.php" />
-        <option value="$PROJECT_DIR$/application/models/Noticias_model.php" />
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/application/views/noticias/noticias.php" />
         <option value="$PROJECT_DIR$/application/views/template/head.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Noticias.php" />
+        <option value="$PROJECT_DIR$/application/models/Noticias_model.php" />
+        <option value="$PROJECT_DIR$/application/views/noticias/edit.php" />
       </list>
     </option>
   </component>
@@ -699,6 +345,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\adm\application\views\noticias" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -727,12 +378,13 @@
       <workItem from="1536869411837" duration="1209000" />
       <workItem from="1537395489511" duration="793000" />
       <workItem from="1537986877087" duration="13399000" />
-      <workItem from="1538003030374" duration="3473000" />
+      <workItem from="1538003030374" duration="4167000" />
+      <workItem from="1538038503961" duration="1856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41409000" />
+    <option name="totallyTimeSpent" value="43959000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -748,7 +400,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19528875" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19832827" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -763,7 +415,7 @@
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3288364" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.3288364" />
-      <window_info anchor="right" id="Database" order="0" weight="0.16945289" />
+      <window_info anchor="right" id="Database" order="0" visible="true" weight="0.16945289" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -788,9 +440,6 @@
           <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Sessoes_camara_model.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Menu_model.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -843,17 +492,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Pedidos_model.php">
+    <entry file="file://$PROJECT_DIR$/application/views/template/head.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="442">
+          <caret line="24" column="102" selection-start-line="24" selection-start-column="102" selection-end-line="24" selection-end-column="102" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Noticias_model.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Pedidos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="207" selection-start-line="11" selection-start-column="207" selection-end-line="11" selection-end-column="207" />
+        <state relative-caret-position="272">
+          <caret line="31" column="42" lean-forward="true" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/noticias/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="117" selection-start-line="33" selection-start-column="117" selection-end-line="33" selection-end-column="117" />
         </state>
       </provider>
     </entry>
@@ -869,36 +525,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
+        <state relative-caret-position="1343">
           <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Pedidos.php">
+    <entry file="file://$PROJECT_DIR$/application/models/Sessoes_camara_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="22" column="70" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="70" />
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Pedidos_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Noticias_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Noticias.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+        <state relative-caret-position="221">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/noticias/noticias.php">
+    <entry file="file://$PROJECT_DIR$/application/views/noticias/edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="117" selection-start-line="33" selection-start-column="117" selection-end-line="33" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/template/head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="24" column="102" selection-start-line="24" selection-start-column="102" selection-end-line="24" selection-end-column="102" />
+        <state relative-caret-position="238">
+          <caret line="12" column="122" selection-start-line="12" selection-start-column="122" selection-end-line="12" selection-end-column="122" />
         </state>
       </provider>
     </entry>
