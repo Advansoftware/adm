@@ -22,6 +22,7 @@
 		<script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/init.js'></script>
 		<script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/main.js'></script>
 		<script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/jquery.mask.min.js'></script>
+        <script type="text/javascript" language="javascript" src='<?php echo base_url();?>../ckeditor/ckeditor.js'></script>
 
 	</head>
 <body>
