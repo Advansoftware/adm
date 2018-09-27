@@ -51,6 +51,9 @@ var Main = {
                 location.reload();
             });
         }
+        else{
+        	alert("Falta Preencher alguns dados");
+		}
 	},
 	envia_noticia : function(){
         var titulo = $("#titulo").val();
@@ -73,9 +76,13 @@ var Main = {
                 data: fd,
                 type: 'post'
             }).done(function (html) {
-                location.reload();
+            	alert(html);
+               location.reload();
             });
 		}
+        else{
+            alert("Falta Preencher alguns dados");
+        }
 	}
 }
 

@@ -29,7 +29,10 @@
         <div class="col mt-3">
             <textarea name="texto" id="texto"></textarea>
             <script>
-                CKEDITOR.replace( 'texto' );
+                CKEDITOR.replace('texto', {
+                    filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+                    filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
+                } );
             </script>
         </div>
     </div>
