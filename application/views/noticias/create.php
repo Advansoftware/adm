@@ -12,6 +12,10 @@
                 <div class="input-field col s4">
                     <input type="text" class="datepicker" id="data" name="data" placeholder="Data Publicação">
                 </div>
+                <div class="input-field col s12">
+                    <input placeholder="Facebook URL" id="facebook" name="facebook" type="text" class="validate">
+                    <label for="titulo">Facebook Link</label>
+                </div>
             </div>
             <div class="file-field input-field">
                 <div class="btn">
