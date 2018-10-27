@@ -29,7 +29,7 @@ var Main = {
 	envia_pedido : function(){
 
 		var vereadores = $("#vereadores").val();
-		var nome_pedido = "Pedido de Providência: " + $("#numero").val();
+		var nome_pedido = $("#numero").val();
 		var data_pedido  = $("#data").val();
         var file_data = $('#file').prop('files')[0];
         var fd = new FormData();

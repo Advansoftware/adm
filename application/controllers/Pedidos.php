@@ -22,13 +22,13 @@ class Pedidos extends Geral {
 		$nome = $this->input->post('nome');
 		$data = $this->convert_date($this->input->post('data'), "en");
         $ver = explode(',', $vereador);
+        $nomearquivo = str_replace("/", "-", $nome);
         //upload file
         $config['upload_path'] = '../camara/content/pedidos_de_providencia/';
         $config['allowed_types'] = '*';
         $config['max_filename'] = '255';
-        $config['file_name'] = $vereador."_".$_FILES['arquivo']['name'];
+        $config['file_name'] = $vereador."_".$nomearquivo.".pdf";
         $config['max_size'] = '51200'; //50 MB
-
         if(isset($_FILES['arquivo']['name']))
         {
             if(0 < $_FILES['arquivo']['error'])
@@ -37,7 +37,7 @@ class Pedidos extends Geral {
             }
             else
             {
-                if(file_exists("../camara/content/pedidos_de_providencia/".$vereador."_".$_FILES['arquivo']['name']))
+                if(file_exists("../camara/content/pedidos_de_providencia/".$config['file_name']))
                 {
                     echo "Arquivo Ja Existe.";
                 }
@@ -50,9 +50,9 @@ class Pedidos extends Geral {
                     }
                     else
                     {
-                        $arquivo = $vereador."_".$_FILES['arquivo']['name'];
+                        $arquivo = $config['file_name'];
                         echo $arquivo;
-                        $this->Pedidos_model->set_pedido($nome,$data,$arquivo);
+                        $this->Pedidos_model->set_pedido("Pedido de Providência: ".$nome,$data,$arquivo);
                         $get_id_arquivo = $this->Pedidos_model->get_id_arquivo($arquivo);
                         foreach ($ver as $vereadores) {
                             $this->Pedidos_model->set_vereador_pedidosByid($vereadores, $get_id_arquivo['id']);
