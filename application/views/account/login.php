@@ -88,7 +88,6 @@
 <script type="text/javascript" src="<?php echo $url; ?>assets/js/Url.js"></script>
 <script type="text/javascript" src="<?php echo $url; ?>assets/js/main.js"></script>
 <script type="text/javascript" src="<?php echo $url; ?>assets/js/bootstrap.min.js"></script>
-<?php //echo $_SESSION['token']; ?>
 </body>
 
 </html>
