@@ -6,7 +6,6 @@ class Home extends Geral {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->helper("climatempo");
 	}
 	public function index(){
 		$this->inicio();
