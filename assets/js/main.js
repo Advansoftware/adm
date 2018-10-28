@@ -2,7 +2,7 @@ var Main = {
 	carrega : function(){
 		$(".dropdown-trigger").dropdown();
         $('#numero').mask('00/0000', {reverse: true});
-	   $('select').formSelect();
+	    $('select').formSelect();
 	    $('.datepicker').datepicker({
 		i18n: {
 			months: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
