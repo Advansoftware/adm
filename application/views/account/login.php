@@ -41,41 +41,35 @@
         </div>
     </div>
     <div class="row">
-        <div class="container">
-                <div class="z-depth-1 grey lighten-4 row">
+        <div class="z-depth-1 grey lighten-4 row">
 
-                    <form class="col s12" method="post">
-                        <div class='row'>
-                            <div class='col s12'>
-                            </div>
-                        </div>
-
-                        <div class='row'>
-                            <div class='input-field col s12'>
-                                <input class='validate' type='email' name='email' id='email' />
-                                <label for='email'>Enter your email</label>
-                            </div>
-                        </div>
-
-                        <div class='row'>
-                            <div class='input-field col s12'>
-                                <input class='validate' type='password' name='password' id='password' />
-                                <label for='password'>Enter your password</label>
-                            </div>
-                            <label style='float: right;'>
-                                <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
-                            </label>
-                        </div>
-
-                        <br />
-                            <div class='row'>
-                                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
-                            </div>
-
-                    </form>
+            <form class="col s12" method="post">
+                <div class='row'>
+                    <div class='col s12'>
+                    </div>
                 </div>
+
+                <div class='row'>
+                    <div class='input-field col s12'>
+                        <input class='validate' type='email' name='email' id='email' />
+                        <label for='email'>Enter your email</label>
+                    </div>
+                </div>
+
+                <div class='row'>
+                    <div class='input-field col s12'>
+                        <input class='validate' type='password' name='password' id='password' />
+                        <label for='password'>Enter your password</label>
+                    </div>
+                </div>
+
+                <br />
+                    <div class='row'>
+                        <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
+                    </div>
+
+            </form>
         </div>
-        <a href="#!">Create account</a>
     </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
