@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2c9ee86-4769-42bd-b5a3-e13b3c30fbfc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/init.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -152,15 +151,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Url.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/Url.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -182,26 +172,8 @@
       <file leaf-file-name="Account.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="98" column="63" selection-start-line="98" selection-start-column="63" selection-end-line="98" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+            <state relative-caret-position="-592">
+              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -215,11 +187,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="init.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="init.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="345">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -255,7 +227,6 @@
         <option value="$PROJECT_DIR$/application/views/pedidos/pedidos.php" />
         <option value="$PROJECT_DIR$/application/config/routes.php" />
         <option value="$PROJECT_DIR$/application/controllers/Geral.php" />
-        <option value="$PROJECT_DIR$/assets/js/init.js" />
         <option value="$PROJECT_DIR$/assets/js/Url.js" />
         <option value="$PROJECT_DIR$/application/views/account/login.php" />
         <option value="$PROJECT_DIR$/application/controllers/Pedidos.php" />
@@ -264,6 +235,7 @@
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/assets/js/init.js" />
       </list>
     </option>
   </component>
@@ -288,7 +260,7 @@
       <path value="$PROJECT_DIR$/application/vendor/spatie/pdf-to-text" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1340" />
@@ -455,7 +427,7 @@
       <workItem from="1540625251094" duration="2075000" />
       <workItem from="1540627372045" duration="591000" />
       <workItem from="1540706165060" duration="8030000" />
-      <workItem from="1540714503707" duration="296000" />
+      <workItem from="1540714503707" duration="710000" />
     </task>
     <task id="LOCAL-00001" summary="login implementado">
       <created>1540712555143</created>
@@ -468,7 +440,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55626000" />
+    <option name="totallyTimeSpent" value="56040000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -759,13 +731,6 @@
     <entry file="file://$PROJECT_DIR$/phpstorm.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/Url.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -801,20 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="98" column="63" selection-start-line="98" selection-start-column="63" selection-end-line="98" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -824,8 +775,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="368">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="108" column="17" lean-forward="true" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-592">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
         </state>
       </provider>
     </entry>
