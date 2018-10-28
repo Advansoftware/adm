@@ -96,7 +96,7 @@ var Main = {
                 success: function (msg) {
                     if(msg.response == "valido")
                     {
-                        location.reload();
+                        window.location.assign(Url.base_url + "pedidos");
                     }
                     else
                     {

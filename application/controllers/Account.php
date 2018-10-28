@@ -9,6 +9,8 @@ class Account extends Geral {
         $this->load->model("Account_model");
     }
     public function index(){
+        if($this->Account_model->session_is_valid()['status'] == "ok")
+            redirect('pedidos/');
         $this->load->view('account/login', $this->data);
     }
     /*!
@@ -18,7 +20,7 @@ class Account extends Geral {
     {
         unset($_SESSION['id']);
         unset($_SESSION['token']);
-        redirect("admin");
+        redirect("account/");
     }
     /*!
     *	REPONSÁVEL POR REALIZAR TODAS AS VALIDAÇÕES DO LOGIN.

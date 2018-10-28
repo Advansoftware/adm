@@ -69,8 +69,8 @@ class Account_model extends CI_Model
             {
                 $sessao = array(
                     'status' => 'ok',
-                    'id' => $query->row_array()['Id'],
-                    'token' => $query->row_array()['Valor']
+                    'id' => $query->row_array()['id'],
+                    'token' => $query->row_array()['senha']
                 );
                 return $sessao;
             }
