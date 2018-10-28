@@ -13,6 +13,7 @@
       <li><a href="badges.html">noticias</a></li>
       <!-- Dropdown Trigger -->
       <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">vereador<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><button id="bt_logout">Sair</button></li>
     </ul>
   </div>
 </nav>

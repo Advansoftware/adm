@@ -1,3 +1,3 @@
 var Url = {
-	base_url : "http://" + window.location.host + "/git/adm/"
+	base_url : "http://" + window.location.host + "/adm/"
 }
