@@ -13,6 +13,7 @@ user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 
 #codeigniter 3
+.idea/*
 application/logs/*
 application/config/config.php
 assets/js/Url.js
@@ -20,3 +21,4 @@ assets/js/Url.js
 !application/logs/.htaccess
 /vendor/
 
+.idea/workspace.xml
