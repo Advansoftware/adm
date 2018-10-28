@@ -16,6 +16,8 @@ class Pedidos extends Geral {
 	public function index(){
 		$data['pedidos'] = $this->Pedidos_model->get_vereador_pedidos();
 		$data['lista_vereador'] = $this->Vereador_model->get_vereador();
+		$data['controller'] = 'pedido';
+
 		$this->inicio($data);
 		$this->load->view('pedidos/create_edit');
 		$this->load->view('pedidos/pedidos');
