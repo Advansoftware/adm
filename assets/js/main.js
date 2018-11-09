@@ -1,4 +1,5 @@
 var Main = {
+    base_url : "http://" + window.location.host + "/adm/",
 	carrega : function(){
 		$(".dropdown-trigger").dropdown();
         $('#numero').mask('00/0000', {reverse: true});
