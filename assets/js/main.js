@@ -1,5 +1,5 @@
 var Main = {
-	base_url : "http://" + window.location.host + "/adm/",
+    base_url : "http://" + window.location.host + "/adm/",
 	carrega : function(){
 		$(".dropdown-trigger").dropdown();
         $('#numero').mask('00/0000', {reverse: true});
@@ -83,6 +83,100 @@ var Main = {
         else{
             alert("Falta Preencher alguns dados");
         }
-	}
+	},
+    login : function () {
+        if(Main.login_isvalid() == true)
+        {
+            Main.modal("aguardar","Aguarde... validando seus dados.");
+            $.ajax({
+                url: Url.base_url+'account/validar',
+                data: $("#form_login").serialize(),
+                dataType:'json',
+                cache: false,
+                type: 'POST',
+                success: function (msg) {
+                    if(msg.response == "valido")
+                    {
+                        window.location.assign(Url.base_url + "pedidos");
+                    }
+                    else
+                    {
+                        setTimeout(function(){
+                            $('#modal_aguardar').modal('hide');
+                        },500);
+                        Main.limpa_login();
+                        Main.modal("aviso", msg.response);
+                    }
+                }
+            });
+        }
+    },
+    logout : function (){
+        Main.modal("aguardar", "Aguarde... encerrando sessão");
+    },
+    modal : function(tipo, mensagem)
+    {
+        $("#mensagem_"+tipo).html(mensagem);
+        $('#modal_'+tipo).modal({
+            keyboard: true,
+            backdrop : 'static',
+        });
+
+        if(tipo == "aviso")
+        {
+            $('#modal_aviso').on('shown.bs.modal', function () {
+                $('#bt_close_modal_aviso').trigger('focus')
+            })
+        }
+        else if(tipo == "confirm")
+        {
+            $('#modal_confirm').on('shown.bs.modal', function () {
+                $('#bt_confirm_modal').trigger('focus')
+            })
+        }
+    },
+    limpa_login : function ()
+    {
+        $("#password").val("");
+        $("#password").focus();
+    },
+    login_isvalid : function (){
+        if($("#email").val() == "")
+            Main.show_error("email","Informe seu e-mail","");
+        else if(Main.valida_email($("#email").val()) == false)
+            Main.show_error("email","Formato de e-mail inválido","");
+        else if($("#password").val() == "")
+            Main.show_error("password","Insira sua senha","");
+        else
+            return true;
+    },
+    valida_email : function(email)
+    {
+        var nome = email.substring(0, email.indexOf("@"));
+        var dominio = email.substring(email.indexOf("@")+ 1, email.length);
+
+        if ((nome.length >= 1) &&
+            (dominio.length >= 3) &&
+            (nome.search("@")  == -1) &&
+            (dominio.search("@") == -1) &&
+            (nome.search(" ") == -1) &&
+            (dominio.search(" ") == -1) &&
+            (dominio.search(".") != -1) &&
+            (dominio.indexOf(".") >= 1)&&
+            (dominio.lastIndexOf(".") < dominio.length - 1))
+            return true;
+        else
+            return false;
+    },
+    show_error : function(form, error, class_error)
+    {
+        if(class_error != "")
+            document.getElementById(form).className = "input-material "+class_error;
+        if(error != "" && document.getElementById(form) != undefined)
+            document.getElementById(form).focus();
+
+        document.getElementById("error-"+form).innerHTML = error;
+    }
+
 }
 

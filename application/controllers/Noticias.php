@@ -12,13 +12,16 @@ class Noticias extends Geral {
 
     }
     public function create(){
+        $data['controller'] = 'noticias';
         $this->inicio();
         $this->load->view('noticias/create');
-        $this->load->view('pedidos/float_button');
+        $this->load->view('pedidos/float_button', $data);
     }
     public function edit($id = null){
         $data["noticia"] = $this->Noticias_model->get_noticiaById($id);
         $this->inicio($data);
+        $data['controller'] = 'noticias';
+
         $this->load->view('noticias/edit');
         $this->load->view('pedidos/float_button');
     }

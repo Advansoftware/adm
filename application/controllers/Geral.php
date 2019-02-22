@@ -48,5 +48,22 @@
 			$this->load->view('template/head', $dados);
 			$this->load->view('template/menu');
 		}
+        public function hashing($data)
+        {
+            return password_hash($data, PASSWORD_DEFAULT);
+        }
+        /*!
+        *	RESPONSÁVEL POR VALIDAR SE UMA STRING CORRESPONDE A UMA HASH.
+        *
+        *	$hash -> Contém a hash.
+        *	$data -> Contém uma string que será verificada se corresponde a hash informada.
+        */
+        public function valida_data_hashing($hash, $data)
+        {
+            if (password_verify($data, $hash))
+                return 1;
+            else
+                return 0;
+        }
 	}
 ?>
