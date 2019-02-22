@@ -50,7 +50,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <?php
-                                $atr = array('id' => 'form_login','name' => 'form_login','class' => 'col s12');
+                                $atr = array('id' => 'form_login','name' => 'form_login','class' => 'col-sm-12');
                                 echo form_open('account/validar',$atr);
 
                                 ?>

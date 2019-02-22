@@ -6,10 +6,10 @@ class Pedidos extends Geral {
 	public function __construct()
 	{
 		parent::__construct();
-        $this->load->model('Account_model');
+        /*$this->load->model('Account_model');
 		if($this->Account_model->session_is_valid()['status'] != "ok")
             redirect('account/');
-
+        */
 		$this->load->model('Vereador_model');
 		$this->load->model('Pedidos_model');
 	}
