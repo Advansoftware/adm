@@ -19,7 +19,7 @@
 		<script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/init.js'></script>
 		<script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/main.js'></script>
 		<script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/jquery.mask.min.js'></script>
-        <script type="text/javascript" language="javascript" src='<?php echo base_url();?>../ckeditor/ckeditor.js'></script>
+        <script type="text/javascript" language="javascript" src='<?php echo base_url();?>../../ckeditor/ckeditor.js'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 	</head>
 <body>
