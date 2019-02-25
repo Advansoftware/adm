@@ -21,7 +21,6 @@ class Pedidos extends Geral {
 		$this->inicio($data);
 		$this->load->view('pedidos/create_edit');
 		$this->load->view('pedidos/pedidos');
-		$this->load->view('pedidos/float_button');
 	}
 	public function cria_pedido(){
 		$vereador = $this->input->post('vereadores');

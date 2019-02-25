@@ -1,7 +1,15 @@
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+</script>
+
 <div class="container">
 	<div class="row mt-2">
 		<div class="col s12 offsset-s2">
-			<table class="responsive-table striped centered">
+			<table id="example" class="table table-striped table-bordered">
         <thead>
           <tr>
           	<th colspan="3">Ultimos Adicionados</th>
