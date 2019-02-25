@@ -15,7 +15,7 @@ class Noticias extends Geral {
         $data['controller'] = 'noticias';
         $this->inicio();
         $this->load->view('noticias/create');
-        $this->load->view('pedidos/float_button', $data);
+        
     }
     public function edit($id = null){
         $data["noticia"] = $this->Noticias_model->get_noticiaById($id);
