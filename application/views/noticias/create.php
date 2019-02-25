@@ -1,30 +1,23 @@
 <div class="container">
-    <div class="row">
+    <div class="row my-3">
         <h2 class="center">Inserir Noticias</h2>
-        <div class="col m12 mt-3  grey lighten-4">
+        <div class="col-md-12 mt-3 bg-light py-3">
             <h5 class="center">Complete os dados abaixo.</h5>
             <div class="row">
-                <div class="input-field col s8">
-                    <input placeholder="Titulo" id="titulo" name="titulo" type="text" class="validate">
-                    <label for="titulo">Titulo</label>
+                <div class="form-group col-sm-8">
+                    <input placeholder="Titulo" id="titulo" name="titulo" type="text" class="form-control">
                 </div>
 
-                <div class="input-field col s4">
-                    <input type="text" class="datepicker" id="data" name="data" placeholder="Data Publicação">
+                <div class="form-group col-sm-4">
+                    <input type="text" class="form-control" id="data" name="data" placeholder="Data Publicação">
                 </div>
-                <div class="input-field col s12">
-                    <input placeholder="Facebook URL" id="facebook" name="facebook" type="text" class="validate">
-                    <label for="titulo">Facebook Link</label>
+                <div class="form-group col-sm-12">
+                    <input placeholder="Facebook URL" id="facebook" name="facebook" type="text" class="form-control">
                 </div>
             </div>
             <div class="file-field input-field">
-                <div class="btn">
-                    <span>Arquivo</span>
-                    <input type="file" id="file" name="arquivo">
-                </div>
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" required placeholder="Foto Destaque" type="text">
-                </div>
+                <label for="file">Imagem Destaque </label>
+                    <input type="file" id="file" class="btn btn-success btn-block" name="arquivo">
             </div>
         </div>
     </div>
@@ -40,16 +33,12 @@
             </script>
         </div>
     </div>
-    <div class="row">
-        <div class="col m6">
+    <div class="row my-3">
+        <div class="col-md-6">
 
-            <button class="btn waves-effect blue darken-1 waves-light" type="submit" name="action" onclick="Main.envia_noticia();">Enviar Dados
-                <i class="material-icons right">send</i>
-            </button>
+            <button class="btn btn-primary" type="submit" name="action" onclick="Main.envia_noticia();">Enviar Dados</button>
         </div>
-            <div class="col m6">
-                <button class="btn waves-effect offset-m10 waves-light right red darken-3" type="submit" name="action">Cancelar
-                    <i class="material-icons right">close</i>
-                </button>
+            <div class="col-md-6">
+                <button class="btn btn-danger offset-md-9" type="submit" name="action">Cancelar</button>
             </div>
 </div>
