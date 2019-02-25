@@ -1,8 +1,7 @@
 <html>
 
 <head>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
         body {
@@ -11,7 +10,7 @@
             flex-direction: column;
         }
         body {
-            background: #fff;
+            background: #adb5bd;
         }
         .input-field input[type=date]:focus + label,
         .input-field input[type=text]:focus + label,
@@ -33,56 +32,51 @@
 <?php
     $this->load->view('template/modal');
 ?>
-<div class="container"></div>
-    <div class="row">
-        <div class="col s7 offset-m4">
-<!--            <img class="responsive-img center-align" src="<?= base_url()?>/content/imagens/logo_oficial.jpg" />-->
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s12">
-           <h5 class="indigo-text">Please, login into your account</h5>
-        </div>
-    </div>
-    <div class="row">
-        <div class="z-depth-1 grey lighten-4 row">
-            <?php
-                $atr = array('id' => 'form_login','name' => 'form_login','class' => 'col s12');
-                echo form_open('account/validar',$atr);
-            ?>
-                <div class='row'>
-                    <div class='col s12'>
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-5 offset-md-1">
+            <div class="card">
+                <div class="card-header bg-primary text-center">
+                    <img class="img-fluid" style="width: 200px" src="<?= base_url()?>/content/imagens/logo_oficial.png" />
+                </div>
+                <div class="card-body bg-dark text-white">
+                    <div class="container text-center">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="lead">Area Restrita</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <?php
+                                $atr = array('id' => 'form_login','name' => 'form_login','class' => 'col-sm-12');
+                                echo form_open('account/validar',$atr);
+
+                                ?>
+                                <div class="form-group row">
+                                    <label for="email" class="col-sm-3 col-form-label">Email</label>
+                                    <input type="email" class="form-control validate col-sm-9" name="email" id="email">
+                                </div>
+                                <div class="form-group row">
+                                    <label for="senha" class="col-sm-3 col-form-label">Senha</label>
+                                    <input type="password" class="form-control validate col-sm-9" name="senha" id="senha">
+                                </div>
+                                    <button type='submit' name='btn_login' class='btn btn-primary w-50 my-3'>Login</button>
+                            </div>
+                        </div>
+                        </form>
                     </div>
                 </div>
-
-                <div class='row'>
-                    <div class='input-field col s12'>
-                        <input class='validate' type='email' name='email' id='email' />
-                        <label for='email'>Enter your email</label>
-                        <div class='input-group mb-2 mb-sm-0 text-danger' id='error-email'></div>
-                    </div>
-                </div>
-
-                <div class='row'>
-                    <div class='input-field col s12'>
-                        <input class='validate' type='password' name='password' id='password' />
-                        <label for='password'>Enter your password</label>
-                        <div class='input-group mb-2 mb-sm-0 text-danger' id='error-password'></div>
-                    </div>
-
-                </div>
-
-                <br />
-                    <div class='row'>
-                        <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
-                    </div>
-
-            </form>
+            </div>
         </div>
     </div>
-<script type="text/javascript" src="<?php echo $url; ?>assets/js/jquery-3.1.1.min.js"></script>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="<?php echo $url; ?>assets/js/jquery.mask.min.js"></script>
-<script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/materialize.min.js'></script>
 <script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/init.js'></script>
 <script type="text/javascript" src="<?php echo $url; ?>assets/js/Url.js"></script>
 <script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/main.js'></script>

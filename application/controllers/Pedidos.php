@@ -6,10 +6,10 @@ class Pedidos extends Geral {
 	public function __construct()
 	{
 		parent::__construct();
-        $this->load->model('Account_model');
+        /*$this->load->model('Account_model');
 		if($this->Account_model->session_is_valid()['status'] != "ok")
             redirect('account/');
-
+        */
 		$this->load->model('Vereador_model');
 		$this->load->model('Pedidos_model');
 	}
@@ -21,7 +21,6 @@ class Pedidos extends Geral {
 		$this->inicio($data);
 		$this->load->view('pedidos/create_edit');
 		$this->load->view('pedidos/pedidos');
-		$this->load->view('pedidos/float_button');
 	}
 	public function cria_pedido(){
 		$vereador = $this->input->post('vereadores');
