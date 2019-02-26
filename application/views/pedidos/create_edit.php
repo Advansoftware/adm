@@ -1,9 +1,3 @@
-<script language="JavaScript">
-    // In your Javascript (external .js resource or <script> tag)
-    $(document).ready(function() {
-        $('#vereadores').select2();
-    });
-</script>
 <div class="container my-3">
 <form method="post" enctype="multipart/form-data">
     <div class="row">
@@ -30,7 +24,7 @@
 					<?php endforeach; ?>
 			    </select>
                  <div class="col-sm-12 col-md-4">
-                     <button class="btn form-control btn-block btn-primary my-2" onclick="Main.envia_pedido();">Enviar</button>
+                     <a class="btn form-control btn-block btn-primary text-white my-2" onclick="Main.envia_pedido();">Enviar</a>
                  </div>
 			  </div>
 

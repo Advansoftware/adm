@@ -1,9 +1,9 @@
 var Main = {
     base_url : "http://" + window.location.host + "/git/adm/",
 	carrega : function(){
-		$(".dropdown-trigger").dropdown();
         $('#numero').mask('00/0000', {reverse: true});
 	    $('#data').mask('00/00/0000', {reverse: true});
+        $('#vereadores').select2();
 	},
 	envia_pedido : function(){
 
@@ -16,6 +16,7 @@ var Main = {
         fd.append('vereadores',vereadores);
         fd.append('data',data_pedido);
         fd.append('nome',nome_pedido);
+
         if(vereadores != '' && nome_pedido != '' && data_pedido != '') {
             $.ajax({
                 method: "POST",
@@ -30,9 +31,9 @@ var Main = {
                 location.reload();
             });
         }
-        else{
-        	alert("Falta Preencher alguns dados");
-		}
+        else {
+            alert("Falta Preencher alguns dados");
+        }
 	},
 	envia_noticia : function(){
         var titulo = $("#titulo").val();
