@@ -13,7 +13,8 @@ class Noticias extends Geral {
     }
     public function create(){
         $data['controller'] = 'noticias';
-        $this->inicio();
+        $data['title'] = "Criar Noticia";
+        $this->inicio($data);
         $this->load->view('noticias/create');
         
     }
