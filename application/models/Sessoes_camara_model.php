@@ -19,5 +19,9 @@
 		public function countAll(){
 			return $this->db->count_all('sessoes');
 		}
+		public function get_categoria(){
+			$query = $this->db->query("select * from sessao_categoria");
+			return $query->result_array();
+		}
 	}
 ?>
