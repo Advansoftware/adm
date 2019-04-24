@@ -7,9 +7,9 @@ var Main = {
 	},
 	envia_pedido : function(){
 
-		var vereadores = $("#vereadores").val();
-		var nome_pedido = $("#numero").val();
-		var data_pedido  = $("#data").val();
+        var vereadores = $("#vereadores").val();
+        var nome_pedido = $("#numero").val();
+        var data_pedido  = $("#data").val();
         var file_data = $('#file').prop('files')[0];
         var fd = new FormData();
         fd.append('arquivo',file_data);
@@ -34,7 +34,39 @@ var Main = {
         else {
             alert("Falta Preencher alguns dados");
         }
-	},
+    },
+    envia_sessao : function(){
+
+        var numero = $("#snum").val();
+        var sessao = $("#sessao").val();
+        var data_sessao  = $("#data").val();
+        var categoria  = $("#categoria").val();
+        var file_data = $('#file').prop('files')[0];
+        var fd = new FormData();
+        fd.append('arquivo',file_data);
+        fd.append('numero',numero);
+        fd.append('data',data_sessao);
+        fd.append('sessao',sessao);
+        fd.append('categoria',categoria);
+
+        if(numero != '' && sessao != '' && data_sessao != '' && categoria != '') {
+            $.ajax({
+                method: "POST",
+                url: Main.base_url + "sessao/cria_sessao",
+                dataType: 'text',
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: fd,
+                type: 'post'
+            }).done(function (html) {
+                location.reload();
+            });
+        }
+        else {
+            alert("Falta Preencher alguns dados");
+        }
+    },
 	envia_noticia : function(){
         var titulo = $("#titulo").val();
         var data = $("#data").val();

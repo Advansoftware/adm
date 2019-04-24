@@ -18,14 +18,14 @@
                 <input type="text" class="form-control  col-md-10" id="data" name="data" placeholder="Data">
             </div>
 			 <div class="form-group col-md-3">
-			    <select id="vereadores" class="form-control" name="vereadores">
+			    <select id="categoria" class="form-control" name="categoria">
 					<option value="" disabled selected>Categoria</option>
-					<?php foreach($lista_vereador as $vereador):?>
-					<option value="<?= $vereador['id']?>"><?= $vereador['nome']?></option>
+					<?php foreach($lista_categoria as $categoria):?>
+					<option value="<?= $categoria['id']?>"><?= $categoria['nome']?></option>
 					<?php endforeach; ?>
 			    </select>
 			  </div>
-            <a class="btn btn-primary text-white  my-2" onclick="Main.envia_pedido();">Enviar</a>
+            <a class="btn btn-primary text-white  my-2" onclick="Main.envia_sessao();">Enviar</a>
         </div>
     </div>
 </form>

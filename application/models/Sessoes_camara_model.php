@@ -23,5 +23,15 @@
 			$query = $this->db->query("select * from sessao_categoria");
 			return $query->result_array();
 		}
+		public function set_sessao($nome,$datas,$arquivo, $categoria, $numero){
+			$data = array(
+				'nome' => $nome,
+				'data' => $datas,
+				'arquivo' => $arquivo,
+				'categoria' =>$categoria,
+				'sessao' => $numero
+			);
+			$this->db->insert('sessoes',$data);
+		}
 	}
 ?>
