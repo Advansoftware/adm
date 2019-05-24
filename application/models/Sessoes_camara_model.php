@@ -33,5 +33,9 @@
 			);
 			$this->db->insert('sessoes',$data);
 		}
+		public function delById($id){
+
+			return $this->db->query("DELETE FROM sessoes WHERE sessoes.id = $id");
+		}
 	}
 ?>

@@ -19,6 +19,7 @@
               <th>Sessão</th>
               <th>Arquivo</th>
               <th>Data</th>
+              <th>Ações</th>
           </tr>
         </thead>
 
@@ -29,6 +30,7 @@
             <td><?= $pedido['nome']?></td>
             <td><?= $pedido['arquivo']?></td>
             <td><?= $pedido['data']?></td>
+        <td><a class="btn btn-danger" href="<?=base_url()?>/sessao/deletaSessao/<?=$pedido['id']?>">Apagar</td>
           </tr>
       <?php endforeach;?>
         </tbody>

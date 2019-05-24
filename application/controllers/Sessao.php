@@ -42,7 +42,7 @@ class Sessao extends Geral {
             }
             else
             {
-                if(file_exists("../camara/content/sessoes/".$nomearquivo))
+                if(file_exists("../camara/content/sessoes/".$config['file_name']))
                 {
                     echo "Arquivo Ja Existe.";
                 }
@@ -67,6 +67,10 @@ class Sessao extends Geral {
         else {
             echo 'Por Favor escolha um arquivo';
         }
+    }
+    public function deletaSessao($id){
+        $this->Sessoes_camara_model->delById($id);
+        redirect('/sessao');
     }
 
 }
