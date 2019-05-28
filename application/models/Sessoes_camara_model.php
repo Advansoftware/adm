@@ -37,5 +37,10 @@
 
 			return $this->db->query("DELETE FROM sessoes WHERE sessoes.id = $id");
 		}
+		public  function getArquivoById($id){
+
+			return $this->db->query("SELECT * FROM sessoes WHERE id = $id")->row_array();
+
+		}
 	}
 ?>

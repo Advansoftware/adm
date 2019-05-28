@@ -60,7 +60,7 @@ var Main = {
                 data: fd,
                 type: 'post'
             }).done(function (html) {
-                alert(html);
+                console.log(html);
                 location.reload();
             });
         }

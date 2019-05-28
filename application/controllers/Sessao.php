@@ -58,8 +58,8 @@ class Sessao extends Geral {
                         $arquivo = $config['file_name'];
                         echo $arquivo;
                         $this->Sessoes_camara_model->set_sessao($nome,$data,$arquivo,$categoria,$numero);
-                        $get_id_arquivo = $this->Sessoes_camara_model->get_id_arquivo($arquivo);
-                        echo "enviado com sucesso.";
+
+                        echo " enviado com sucesso.";
                     }
                 }
             }
@@ -69,8 +69,15 @@ class Sessao extends Geral {
         }
     }
     public function deletaSessao($id){
-        $this->Sessoes_camara_model->delById($id);
-        redirect('/sessao');
+        $arquivo = str_replace(" ", "_",  $this->Sessoes_camara_model->getArquivoById($id));
+        $caminho = "..\camara\content\sessoes\\".$arquivo["arquivo"];
+        if(unlink("$caminho")){
+            $this->Sessoes_camara_model->delById($id);
+            redirect('/sessao');
+        }
+        else{
+            echo "Arquivo Nao Apagado";
+        }
     }
 
 }
