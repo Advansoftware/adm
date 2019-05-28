@@ -27,5 +27,6 @@
 		    $this->db->query("insert into vereador_pedido (id_vereador, id_pedido) values(".$this->db->escape($idvereador).",".$this->db->escape($idpedido).")");
         }
 
+
 	}
 ?>
