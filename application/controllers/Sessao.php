@@ -10,12 +10,12 @@ class Sessao extends Geral {
 		if($this->Account_model->session_is_valid()['status'] != "ok")
             redirect('account/');
         */
-		$this->load->model('Vereador_model');
+		//$this->load->model('Vereador_model');
 		$this->load->model('Sessoes_camara_model');
 	}
 	public function index(){
 		$data['pedidos'] = $this->Sessoes_camara_model->get_sessao();
-		$data['lista_vereador'] = $this->Sessoes_camara_model->get_categoria();
+		$data['lista_categoria'] = $this->Sessoes_camara_model->get_categoria();
 		$data['controller'] = 'pedidos';
 		$data['title'] = "Pedidos";
 		$this->inicio($data);
@@ -23,16 +23,16 @@ class Sessao extends Geral {
 		$this->load->view('sessao/sessao');
 	}
 	public function cria_sessao(){
-		$vereador = $this->input->post('vereadores');
-		$nome = $this->input->post('nome');
+		$numero = $this->input->post('numero');
+		$nome = $this->input->post('sessao');
 		$data = $this->convert_date($this->input->post('data'), "en");
-        $ver = explode(',', $vereador);
-        $nomearquivo = str_replace("/", "-", $nome);
+        $categoria = $this->input->post('categoria');
+        $nomearquivo = $numero."_".$categoria."_".$nome.".pdf";
         //upload file
-        $config['upload_path'] = '../camara/content/pedidos_de_providencia/';
+        $config['upload_path'] = '../camara/content/sessoes/';
         $config['allowed_types'] = '*';
         $config['max_filename'] = '255';
-        $config['file_name'] = $vereador."_".$nomearquivo.".pdf";
+        $config['file_name'] = $nomearquivo;
         $config['max_size'] = '51200'; //50 MB
         if(isset($_FILES['arquivo']['name']))
         {
@@ -42,7 +42,7 @@ class Sessao extends Geral {
             }
             else
             {
-                if(file_exists("../camara/content/pedidos_de_providencia/".$config['file_name']))
+                if(file_exists("../camara/content/sessoes/".$config['file_name']))
                 {
                     echo "Arquivo Ja Existe.";
                 }
@@ -57,17 +57,26 @@ class Sessao extends Geral {
                     {
                         $arquivo = $config['file_name'];
                         echo $arquivo;
-                        $this->Pedidos_model->set_pedido("Pedido de Providência: ".$nome,$data,$arquivo);
-                        $get_id_arquivo = $this->Pedidos_model->get_id_arquivo($arquivo);
-                        foreach ($ver as $vereadores) {
-                            $this->Pedidos_model->set_vereador_pedidosByid($vereadores, $get_id_arquivo['id']);
-                            echo "enviado com sucesso.";
-                        }
+                        $this->Sessoes_camara_model->set_sessao($nome,$data,$arquivo,$categoria,$numero);
+
+                        echo " enviado com sucesso.";
                     }
                 }
             }
-        } else {
+        }
+        else {
             echo 'Por Favor escolha um arquivo';
+        }
+    }
+    public function deletaSessao($id){
+        $arquivo = str_replace(" ", "_",  $this->Sessoes_camara_model->getArquivoById($id));
+        $caminho = "..\camara\content\sessoes\\".$arquivo["arquivo"];
+        if(unlink("$caminho")){
+            $this->Sessoes_camara_model->delById($id);
+            redirect('/sessao');
+        }
+        else{
+            echo "Arquivo Nao Apagado";
         }
     }
 
