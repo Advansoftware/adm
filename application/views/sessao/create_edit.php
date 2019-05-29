@@ -2,7 +2,7 @@
 <form method="post" enctype="multipart/form-data">
     <div class="row">
         <div class="col-sm-10 offset-md-1">
-            <input type="file" id="file" class="btn btn-success btn-block my-3 form-control-file" name="arquivo" onchange="Main.atualizar_dados()">
+            <input type="file" id="file" class="btn btn-success btn-block my-3 form-control-file" name="arquivo" onchange="Main.preenche_sessao()">
         </div>
     </div>
 

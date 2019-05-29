@@ -190,7 +190,7 @@ var Main = {
 
         document.getElementById("error-"+form).innerHTML = error;
     },
-    atualizar_dados : function ()
+    preenche_sessao : function ()
     {
         var file_data = $('#file').prop('files')[0];
         if(file_data != null){
