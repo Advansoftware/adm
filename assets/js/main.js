@@ -189,6 +189,35 @@ var Main = {
             document.getElementById(form).focus();
 
         document.getElementById("error-"+form).innerHTML = error;
+    },
+    preenche_sessao : function ()
+    {
+        var file_data = $('#file').prop('files')[0];
+        if(file_data != null){
+            var ano_arquivo = file_data['name'].split("-");
+            var dia_arquivo = ano_arquivo[1].split(".");
+            $("#snum").val(dia_arquivo[0]);
+
+            $("#categoria").change(function () {
+
+                var idCategoria = $("#categoria").val();
+
+                switch (idCategoria) {
+                    case "1" :
+                            $("#sessao").val("S. Ordinárias de "+ ano_arquivo[0]);
+                        break;
+                    case "2":
+                        $("#sessao").val("S. Extraordinárias de " + ano_arquivo[0]);
+                        break;
+                    case "3":
+                        $("#sessao").val("S. Solenes de "+ ano_arquivo[0]);
+                        break;
+                    default :
+                        $("#sessao").val("S. Ordinárias de "+ ano_arquivo[0]);
+                }
+            });
+        }
+
     }
 
 }
