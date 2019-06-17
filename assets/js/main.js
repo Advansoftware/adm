@@ -71,6 +71,7 @@ var Main = {
 	envia_noticia : function(){
         var titulo = $("#titulo").val();
         var data = $("#data").val();
+        var facebook = $("#facebook").val();
         var texto = CKEDITOR.instances.texto.getData();
         var file_data = $('#file').prop('files')[0];
         var fd = new FormData();
@@ -78,6 +79,7 @@ var Main = {
         fd.append('titulo',titulo);
         fd.append('data',data);
         fd.append('texto',texto);
+        fd.append('facebook',facebook);
         if(titulo != '' && data != '' && file_data != ''  && texto != '') {
             $.ajax({
                 method: "POST",
@@ -89,7 +91,6 @@ var Main = {
                 data: fd,
                 type: 'post'
             }).done(function (html) {
-            	alert(html);
                location.reload();
             });
 		}
@@ -189,6 +190,12 @@ var Main = {
             document.getElementById(form).focus();
 
         document.getElementById("error-"+form).innerHTML = error;
+    },
+    DelSessao : function (id, nome) {
+        Main.modal('confirm', nome + '</br> Tem certeza que deseja excluir esse registro?');
+        $('#bt_delete').click(function () {
+            window.location.href = Main.base_url + "sessao/deletaSessao/" + id;
+        });
     },
     preenche_sessao : function ()
     {
