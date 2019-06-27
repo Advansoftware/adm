@@ -8,7 +8,7 @@
 
 	<div class="row bg-light py-3">
 		<div class="form-inline col-md-6 col-sm-12">
-			<div class="form-group col-sm-5">
+			<div class="form-group mx-auto col-sm-5">
 	          <input placeholder="Numero" id="numero" name="numero" type="text" class="form-control">
        		</div>
 			<div class="form-group col-sm-5">

@@ -2,7 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <?= link_tag('https://wrappixel.com/demos/admin-templates/material-pro/minisidebar/css/style.css');?>
     <style>
         body {
             display: flex;
@@ -35,11 +35,11 @@
 <div class="container">
     <div class="row my-5">
         <div class="col-md-5 offset-md-1">
-            <div class="card">
-                <div class="card-header bg-primary text-center">
+            <div class="login-box card">
+                <div class="card-header bg-info text-center">
                     <img class="img-fluid" style="width: 200px" src="<?= base_url()?>/content/imagens/logo_oficial.png" />
                 </div>
-                <div class="card-body bg-dark text-white">
+                <div class="card-body bg-warning text-dark">
                     <div class="container text-center">
 
                         <div class="row">
@@ -62,7 +62,7 @@
                                     <label for="senha" class="col-sm-3 col-form-label">Senha</label>
                                     <input type="password" class="form-control validate col-sm-9" name="senha" id="senha">
                                 </div>
-                                    <button type='submit' name='btn_login' class='btn btn-primary w-50 my-3'>Login</button>
+                                    <button type='submit' name='btn_login' class='btn btn-info w-50 my-3'>Login</button>
                             </div>
                         </div>
                         </form>
