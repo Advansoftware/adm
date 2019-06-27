@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-info sticky-top">
     <a class="navbar-brand" href="#"><a href="<?php echo base_url();?>" class="brand-logo"><img src="<?php echo base_url();?>content/imagens/logo_oficial.png" id="logo" alt="Câmara Municipal De Brazópolis"  class="responsive-img ml-1" width="200px" title="Câmara Municipal De Brazópolis"></a>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

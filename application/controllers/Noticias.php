@@ -30,6 +30,7 @@ class Noticias extends Geral {
        $titulo = $this->input->post('titulo');
        $data = $this->convert_date($this->input->post('data'), "en");
        $texto = $this->input->post('texto');
+        $facebook = $this->input->post('facebook');
         $config['upload_path'] = '../camara/content/noticias/destaque';
         $config['allowed_types'] = '*';
         $config['max_filename'] = '255';
@@ -59,7 +60,7 @@ class Noticias extends Geral {
                     {
                         $arquivo = $titulo."_".$_FILES['arquivo']['name'];
                         echo $arquivo;
-                        $this->Noticias_model->set_noticias($titulo, $texto, $data, $arquivo);
+                        $this->Noticias_model->set_noticias($titulo, $texto, $data, $arquivo, $facebook);
                             echo "enviado com sucesso.";
                     }
                 }

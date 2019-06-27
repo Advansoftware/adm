@@ -30,7 +30,13 @@
             <td><?= $pedido['nome']?></td>
             <td><?= $pedido['arquivo']?></td>
             <td><?= $pedido['data']?></td>
-        <td><a class="btn btn-danger" href="<?=base_url()?>/sessao/deletaSessao/<?=$pedido['id']?>">Apagar</td>
+        <td><div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-primary"><i class="far fa-edit"></i></button>
+                    <button id="delSessao" type="button" onclick="Main.DelSessao('<?=$pedido['id']?>', '<?= $pedido['nome']?>');" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                </div>
+            </div>
+        </td>
           </tr>
       <?php endforeach;?>
         </tbody>
