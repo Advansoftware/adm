@@ -36,6 +36,7 @@
                     <button id="delSessao" type="button" onclick="Main.DelSessao('<?=$pedido['id']?>', '<?= $pedido['nome']?>');" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
                 </div>
             </div>
+        </td>
           </tr>
       <?php endforeach;?>
         </tbody>

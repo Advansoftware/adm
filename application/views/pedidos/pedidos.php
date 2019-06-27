@@ -27,6 +27,13 @@
             <td><?= $pedido['nome_pedido']?></td>
             <td><?= $pedido['nome_vereador']?></td>
             <td><?= $pedido['data_pedido']?></td>
+            <td><div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+              <div class="btn-group" role="group" aria-label="First group">
+                  <button type="button" class="btn btn-primary"><i class="far fa-edit"></i></button>
+                  <button id="delSessao" type="button" onclick="Main.DelPedido('<?=$pedido['id']?>', '<?= $pedido['nome_pedido']?>');" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+              </div>
+            </div>
+            </td>
           </tr>
       <?php endforeach;?>
         </tbody>
