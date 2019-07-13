@@ -27,13 +27,26 @@ class Sessao extends Geral {
 		$nome = $this->input->post('sessao');
 		$data = $this->convert_date($this->input->post('data'), "en");
         $categoria = $this->input->post('categoria');
-        $nomearquivo = $numero."_".$categoria."_".$nome.".pdf";
+        $nomearquivo = $numero."_".$categoria."_".$nome;
         //upload file
-        $config['upload_path'] = '../camara/content/sessoes/';
         $config['allowed_types'] = '*';
         $config['max_filename'] = '255';
-        $config['file_name'] = $nomearquivo;
         $config['max_size'] = '51200'; //50 MB
+
+        //codigo que tem a função de abrir o conversor
+
+        if(pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION) == 'doc'
+            || pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION) == 'docx'){
+            $config['file_name'] = $nomearquivo.".doc";
+            $config['upload_path'] = 'conversor/';
+            echo "<script>window.open ('conversor/?caminho=../../camara/content/sessoes/', 'pagina', 'width=350 height=150, status=0 top=100, scrollbars=no, status=no, toolbar=no, location=no, menubar=no, resizable=no,toolbar=0 ');</script>";
+        }
+        else{
+            $config['file_name'] = $nomearquivo.".pdf";
+            $config['upload_path'] = '../camara/content/sessoes2/';
+        }
+
+        //FIM
         if(isset($_FILES['arquivo']['name']))
         {
             if(0 < $_FILES['arquivo']['error'])
@@ -55,7 +68,8 @@ class Sessao extends Geral {
                     }
                     else
                     {
-                        $arquivo = $config['file_name'];
+                        //salva o arquivo no banco de dados em pdf
+                        $arquivo = $nomearquivo.".pdf";
                         echo $arquivo;
                         $this->Sessoes_camara_model->set_sessao($nome,$data,$arquivo,$categoria,$numero);
 

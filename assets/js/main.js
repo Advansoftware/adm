@@ -61,7 +61,10 @@ var Main = {
                 type: 'post'
             }).done(function (html) {
                 console.log(html);
-                location.reload();
+                Main.modal("aviso", html);
+                $('#bt_close_modal_aviso').click(function () {
+                    location.reload();
+                });
             });
         }
         else {

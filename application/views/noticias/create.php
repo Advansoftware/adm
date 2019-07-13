@@ -27,8 +27,8 @@
             <textarea name="texto" id="texto"></textarea>
             <script>
                 CKEDITOR.replace('texto', {
-                    filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
-                    filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
+                    filebrowserBrowseUrl: '<?=base_url();?>/ckfinder/ckfinder.html',
+                    filebrowserUploadUrl: '<?=base_url();?>/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
                 } );
             </script>
         </div>
