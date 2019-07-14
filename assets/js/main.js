@@ -71,6 +71,42 @@ var Main = {
             alert("Falta Preencher alguns dados");
         }
     },
+    envia_partido : function(){
+
+        var nome = $("#nome").val();
+        var file_data = $('#file').prop('files')[0];
+        var fd = new FormData();
+        fd.append('arquivo',file_data);
+        fd.append('nome',nome);
+        if(nome != '')
+        {
+            $.ajax({
+                method: "POST",
+                url: Main.base_url + "partidos/createPartido",
+                dataType: 'text',
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: fd,
+                type: 'post'
+            }).done(function (html) {
+                console.log(html);
+                Main.modal("aviso", html);
+                $('#bt_close_modal_aviso').click(function () {
+                    location.reload();
+                });
+            });
+        }
+        else {
+            alert("Falta Preencher alguns dados");
+        }
+    },
+    DelPedido : function (id, nome) {
+        Main.modal('confirm', nome + '</br> Tem certeza que deseja excluir esse registro?');
+        $('#bt_delete').click(function () {
+            window.location.href = Main.base_url + "partidos/deletaPartido/" + id;
+        });
+    },
 	envia_noticia : function(){
         var titulo = $("#titulo").val();
         var data = $("#data").val();
