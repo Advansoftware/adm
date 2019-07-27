@@ -7,8 +7,8 @@
         }
         public function  get_partidos()
         {
-		    $this->db->select("*");
-		    return $this->db->get('partidos')->result_array();
+            $query = $this->db->query("Select * from partidos");
+		    return $query->result_array();
         }
         public  function  set_partidos($nome,$imagem)
         {
