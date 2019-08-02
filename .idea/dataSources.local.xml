@@ -9,7 +9,11 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <introspection-schemas>*:brazopol_camar</introspection-schemas>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="brazopol_camar" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>
