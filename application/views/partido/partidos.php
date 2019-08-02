@@ -25,7 +25,7 @@
         	<?php foreach($partidos as $partido): ?>
           <tr>
             <td><?= $partido['nome']?></td>
-            <td><img src="../../camara/content/imagens/partidos/<?= $partido['imagem']?>" style="width: 50px;"></td>
+            <td><img src="../camara/content/imagens/partidos/<?= $partido['imagem']?>" style="width: 50px;"></td>
             <td><div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
               <div class="btn-group" role="group" aria-label="First group">
                   <button type="button" class="btn btn-primary"><i class="far fa-edit"></i></button>

@@ -1,4 +1,4 @@
-<html>
+<html lang="pt-br">
 	<head> 
 		<!-- Meta Tags utilizadas no site -->
 		<meta charset="utf-8">
