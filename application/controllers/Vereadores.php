@@ -14,13 +14,23 @@ class Vereadores extends Geral {
         $this->load->model('Partidos_model');
 	}
 	public function index(){
-        $data['partidos'] = $this->Partidos_model->get_partidos();
-		//$data['controller'] = 'pedidos';
-		$data['title'] = "Vereadoes";
-		$this->inicio($data);
-		$this->load->view('vereadores/create_edit');
-	}
 
+	}
+    public function create(){
+        $data['partidos'] = $this->Partidos_model->get_partidos();
+        //$data['controller'] = 'pedidos';
+        $data['title'] = "Criar Vereador";
+        $this->inicio($data);
+        $this->load->view('vereadores/create_edit');
+    }
+    public function edit($id){
+        $data['partidos'] = $this->Partidos_model->get_partidos();
+        $data['vereador'] = $this->Vereador_model->get_vereadorByid($id);
+        //$data['controller'] = 'pedidos';
+        $data['title'] = "Alterar Vereador";
+        $this->inicio($data);
+        $this->load->view('vereadores/create_edit');
+    }
 	public function cria_sessao(){
 		$numero = $this->input->post('numero');
 		$nome = $this->input->post('sessao');
