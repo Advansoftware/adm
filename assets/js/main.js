@@ -280,6 +280,38 @@ var Main = {
         };
         // read the image file as a data URL.
         reader.readAsDataURL(this.files[0]);
+    },
+    altera_vereador : function(){
+        var nome = $("#nome").val();
+        var email = $("#email").val();
+        var partido = $("#partido").val();
+        var id = $("#id").val();
+        var file_data = $('#file').prop('files')[0];
+        var fd = new FormData();
+        fd.append('arquivo',file_data);
+        fd.append('nome',nome);
+        fd.append('email',email);
+        fd.append('partido',partido);
+        fd.append('id',id);
+        if(nome != '' && partido != '' && file_data != ''  && email != '', id!='') {
+            $.ajax({
+                method: "POST",
+                url: Main.base_url + "vereadores/altera_vereador",
+                dataType: 'text',
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: fd,
+                type: 'post'
+            }).done(function (html) {
+                //location.reload();
+                console.table(html);
+            });
+        }
+        else{
+            alert("Falta Preencher alguns dados");
+        }
     }
+
 }
 

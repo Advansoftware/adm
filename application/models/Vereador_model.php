@@ -38,6 +38,14 @@
             $query = $this->db->query("SELECT YEAR(p.data_publicacao) as ano FROM pedidos p GROUP BY 1 ORDER by 1 desc");
             return $query->result_array();
         }
+        public function set_vereador($id, $nome, $email, $partido, $arquivo){
+            $this->db->set('nome', $nome);
+            $this->db->set('email', $email);
+            $this->db->set('partido', $partido);
+            $this->db->set('foto', $arquivo);
+            $this->db->where('id', $id);
+            $this->db->update('vereadores');
+           }
 	}
 
 ?>

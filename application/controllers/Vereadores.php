@@ -31,31 +31,17 @@ class Vereadores extends Geral {
         $this->inicio($data);
         $this->load->view('vereadores/create_edit');
     }
-	public function cria_sessao(){
-		$numero = $this->input->post('numero');
-		$nome = $this->input->post('sessao');
-		$data = $this->convert_date($this->input->post('data'), "en");
-        $categoria = $this->input->post('categoria');
-        $nomearquivo = $numero."_".$categoria."_".$nome;
+	public function altera_vereador(){
+		$nome = $this->input->post('nome');
+		$email = $this->input->post('email');
+		$partido = $this->input->post('partido');
+		$id = $this->input->post('id');
+        $nomearquivo = strtolower (str_replace(" ", "_", "$nome"));
         //upload file
         $config['allowed_types'] = '*';
         $config['max_filename'] = '255';
         $config['max_size'] = '51200'; //50 MB
-
-        //codigo que tem a função de abrir o conversor
-
-        if(pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION) == 'doc'
-            || pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION) == 'docx'){
-            $config['file_name'] = $nomearquivo.".doc";
-            $config['upload_path'] = 'conversor/';
-            echo "<script>window.open ('conversor/?caminho=../../camara/content/sessoes/', 'pagina', 'width=350 height=150, status=0 top=100, scrollbars=no, status=no, toolbar=no, location=no, menubar=no, resizable=no,toolbar=0 ');</script>";
-        }
-        else{
-            $config['file_name'] = $nomearquivo.".pdf";
-            $config['upload_path'] = '../camara/content/sessoes2/';
-        }
-
-        //FIM
+        $config['file_name'] = $nomearquivo;
         if(isset($_FILES['arquivo']['name']))
         {
             if(0 < $_FILES['arquivo']['error'])
@@ -64,7 +50,8 @@ class Vereadores extends Geral {
             }
             else
             {
-                if(file_exists("../camara/content/sessoes/".$config['file_name']))
+                $config['upload_path'] = '../camara/content/imagens/vereadores/';
+                if(file_exists("../camara/content/imagens/vereadores/".$config['file_name']))
                 {
                     echo "Arquivo Ja Existe.";
                 }
@@ -78,11 +65,10 @@ class Vereadores extends Geral {
                     else
                     {
                         //salva o arquivo no banco de dados em pdf
-                        $arquivo = $nomearquivo.".pdf";
+                        $arquivo = $nomearquivo;
                         echo $arquivo;
-                        $this->Sessoes_camara_model->set_sessao($nome,$data,$arquivo,$categoria,$numero);
-
-                        echo " enviado com sucesso.";
+                        $this->Vereador_model->set_vereador($id, $nome, $email, $partido, $arquivo);
+                        echo "Enviado com sucesso.";
                     }
                 }
             }
