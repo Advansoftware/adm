@@ -26,6 +26,10 @@
 			return $query->result_array();
 
 		}
+		public function get_vereadores(){
+		   $this->db->select('*');
+		   return $this->db->get('vereadores')->result_array();
+        }
  		public function get_vereadorByid($id1){
  			$this->db->select("*");
  			$this->db->where("id", $id1);
@@ -38,11 +42,11 @@
             $query = $this->db->query("SELECT YEAR(p.data_publicacao) as ano FROM pedidos p GROUP BY 1 ORDER by 1 desc");
             return $query->result_array();
         }
-        public function set_vereador($id, $nome, $email, $partido, $arquivo){
+        public function set_vereador($id, $nome, $email, $partido, $arquivo=null){
             $this->db->set('nome', $nome);
             $this->db->set('email', $email);
             $this->db->set('partido', $partido);
-            $this->db->set('foto', $arquivo);
+            if (isset($arquivo)) $this->db->set('foto', $arquivo);
             $this->db->where('id', $id);
             $this->db->update('vereadores');
            }

@@ -14,14 +14,17 @@ class Vereadores extends Geral {
         $this->load->model('Partidos_model');
 	}
 	public function index(){
-
+        $data['partidos'] = $this->Partidos_model->get_partidos();
+        $data['vereador'] = $this->Vereador_model->get_vereadores();
+        $this->inicio($data);
+        $this->load->view('vereadores/vereadores');
 	}
     public function create(){
         $data['partidos'] = $this->Partidos_model->get_partidos();
         //$data['controller'] = 'pedidos';
         $data['title'] = "Criar Vereador";
         $this->inicio($data);
-        $this->load->view('vereadores/create_edit');
+        $this->load->view('vereadores/create');
     }
     public function edit($id){
         $data['partidos'] = $this->Partidos_model->get_partidos();
@@ -29,7 +32,7 @@ class Vereadores extends Geral {
         //$data['controller'] = 'pedidos';
         $data['title'] = "Alterar Vereador";
         $this->inicio($data);
-        $this->load->view('vereadores/create_edit');
+        $this->load->view('vereadores/edit');
     }
 	public function altera_vereador(){
 		$nome = $this->input->post('nome');
@@ -75,6 +78,7 @@ class Vereadores extends Geral {
         }
         else {
             echo 'Por Favor escolha um arquivo';
+            $this->Vereador_model->set_vereador($id, $nome, $email, $partido);
         }
     }
     public function deletaSessao($id){

@@ -293,7 +293,7 @@ var Main = {
         fd.append('email',email);
         fd.append('partido',partido);
         fd.append('id',id);
-        if(nome != '' && partido != '' && file_data != ''  && email != '', id!='') {
+        if(nome != '' && partido != '' && email != '', id!='') {
             $.ajax({
                 method: "POST",
                 url: Main.base_url + "vereadores/altera_vereador",
@@ -304,8 +304,7 @@ var Main = {
                 data: fd,
                 type: 'post'
             }).done(function (html) {
-                //location.reload();
-                console.table(html);
+                window.location.href = Main.base_url + "vereadores";
             });
         }
         else{
