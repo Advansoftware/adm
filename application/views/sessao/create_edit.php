@@ -17,7 +17,7 @@
                 </select>
             </div>
 			<div class="form-group  col-md-2">
-	          <input placeholder="Numero" id="snum" name="snum" type="number" class="form-control col-md-10">
+	          <input placeholder="Numero" id="snum" name="snum" type="number"  min="0" class="form-control col-md-10">
        		</div>
 			<div class="form-group col-md-3">
 	         <input type="text" class="form-control" id="sessao" name="sessao" placeholder="Sessão">

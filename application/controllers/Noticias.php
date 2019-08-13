@@ -9,7 +9,11 @@ class Noticias extends Geral {
        $this->load->model('Noticias_model');
     }
     public function index(){
-
+        $data["noticias"] = $this->Noticias_model->get_noticias();
+        $data['controller'] = 'noticias';
+        $data['title'] = "Criar Noticia";
+        $this->inicio($data);
+        $this->load->view('noticias/noticias');
     }
     public function create(){
         $data['controller'] = 'noticias';

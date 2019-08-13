@@ -14,5 +14,9 @@
 		    $query = $this->db->query("SELECT * FROM noticias WHERE id = '".$id."'");
 		    return $query->result_array();
         }
+        public function get_noticias(){
+			$this->db->select("*");
+			return $this->db->get("noticias")->result_array();
+		}
 	}
 ?>

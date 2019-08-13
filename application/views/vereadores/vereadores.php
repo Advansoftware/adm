@@ -7,6 +7,11 @@
 </script>
 
 <div class="container">
+    <div class="row mt-2 d-flex justify-content-end">
+        <div class="col-md-3 col-sm-12 my-3">
+            <a href="<?=base_url()?>vereadores/create" class="btn btn-primary btn-block">Adicionar Vereador</a>
+        </div>
+    </div>
 	<div class="row mt-2">
 		<div class="col s12 offsset-s2">
 			<table id="example" class="table table-striped table-bordered">
