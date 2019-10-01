@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" xmlns="http://www.w3.org/1999/html">
     <div class="row my-3">
         <h2 class="center">Inserir Noticias</h2>
         <div class="col-md-12 mt-3 bg-light py-3">
@@ -27,8 +27,8 @@
             <textarea name="texto" id="texto"></textarea>
             <script>
                 CKEDITOR.replace('texto', {
-                    filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
-                    filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
+                    filebrowserBrowseUrl: '<?=base_url();?>/ckfinder/ckfinder.html',
+                    filebrowserUploadUrl: '<?=base_url();?>/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
                 } );
             </script>
         </div>
@@ -39,6 +39,6 @@
             <button class="btn btn-primary" type="submit" name="action" onclick="Main.envia_noticia();">Enviar Dados</button>
         </div>
             <div class="col-md-6">
-                <button class="btn btn-danger offset-md-9" type="submit" name="action">Cancelar</button>
+                <button class="btn btn-danger offset-md-9" type="submit" onclick="window.location.href='<?=base_url()?>noticias'" >Cancelar</button>
             </div>
 </div>

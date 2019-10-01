@@ -7,8 +7,10 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link active" href="<?= base_url()?>pedidos">Pedidos</a>
+            <a class="nav-item nav-link" href="<?= base_url()?>sessao">Sessões</a>
             <a class="nav-item nav-link" href="<?= base_url()?>noticias">Noticias</a>
-            <a class="nav-item nav-link" href="<?= base_url()?>sessao">Sessão</a>
+            <a class="nav-item nav-link" href="<?= base_url()?>vereadores">Vereadores</a>
+            <a class="nav-item nav-link" href="<?= base_url()?>partidos">Partidos</a>
             <a class="nav-item nav-link" href="<?php echo base_url(); ?>account/logout" id="bt_logout">Sair</a>
         </div>
     </div>
