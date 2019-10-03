@@ -28,7 +28,10 @@ var Main = {
                 data: fd,
                 type: 'post'
             }).done(function (html) {
-                location.reload();
+                Main.modal("aviso", html);
+                $('#bt_close_modal_aviso').click(function () {
+                    location.reload();
+                });
             });
         }
         else {

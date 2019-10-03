@@ -43,7 +43,7 @@ class Sessao extends Geral {
         }
         else{
             $config['file_name'] = $nomearquivo.".pdf";
-            $config['upload_path'] = '../camara/content/sessoes2/';
+            $config['upload_path'] = '../camara/content/sessoes/';
         }
 
         //FIM
