@@ -12,8 +12,9 @@
                                     <div class="card-body text-center">
 
                                         <!--local para imagem do vereador-->
-                                        <div id="partido_logo"><img src="../../../camara/content/imagens/partidos/" id="preview" class="img-fluid w-25">
-                                            <img src="../../../camara/content/imagens/vereadores/.jpg" id="preview" class="img-thumbnail">
+                                        <div id="partido_logo"><img src="../../../git/camara/content/imagens/px.png" id="preview" class="img-fluid w-25">
+                                            <br />
+                                            <img src="../../../git/camara/content/imagens/user.png" id="preview" class="img-thumbnail">
                                         </div>
                                     </div>
                                 </div>

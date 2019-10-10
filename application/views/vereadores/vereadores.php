@@ -40,7 +40,7 @@
             <td><div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
               <div class="btn-group" role="group" aria-label="First group">
                   <button type="button" class="btn btn-primary" onclick="window.location.href='<?=base_url();?>vereadores/edit/<?=$vereadores['id']?>'"><i class="far fa-edit"></i></button>
-                  <button id="delSessao" type="button" onclick="" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                  <button id="delSessao" type="button" onclick="Main.DelVereador(<?=$vereadores['id']?>, '<?=$vereadores['nome']?>')" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
               </div>
             </div>
             </td>

@@ -81,6 +81,10 @@ class Vereadores extends Geral {
             $this->Vereador_model->set_vereador($id, $nome, $email, $partido);
         }
     }
+    public function desativaVereador($id){
+        $this->Vereador_model->desativaVereador($id);
+        redirect("/vereadores");
+    }
     public function deletaSessao($id){
         $arquivo = str_replace(" ", "_",  $this->Sessoes_camara_model->getArquivoById($id));
         $caminho = "..\camara\content\sessoes\\".$arquivo["arquivo"];

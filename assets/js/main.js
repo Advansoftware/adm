@@ -313,7 +313,13 @@ var Main = {
         else{
             alert("Falta Preencher alguns dados");
         }
-    }
+    },
+    DelVereador : function (id, nome) {
+        Main.modal('confirm', nome + '</br> Tem certeza que deseja desativar esse vereador?');
+        $('#bt_delete').click(function () {
+            window.location.href = Main.base_url + "vereadores/desativaVereador/" + id;
+        });
+    },
 
 }
 
