@@ -29,11 +29,24 @@ class Pedidos extends Geral {
         $ver = explode(',', $vereador);
         $nomearquivo = str_replace("/", "-", $nome);
         //upload file
-        $config['upload_path'] = '../camara/content/pedidos_de_providencia/';
         $config['allowed_types'] = '*';
         $config['max_filename'] = '255';
-        $config['file_name'] = $vereador."_".$nomearquivo.".pdf";
         $config['max_size'] = '51200'; //50 MB
+
+        //codigo que tem a função de abrir o conversor
+
+        if(pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION) == 'doc'
+            || pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION) == 'docx'){
+            $config['file_name'] = $vereador."_".$nomearquivo.".doc";
+            $config['upload_path'] = 'conversor/';
+            echo "<script>window.open ('conversor/?caminho=../../camara/content/pedidos_de_providencia/', 'pagina', 'width=350 height=150, status=0 top=100, scrollbars=no, status=no, toolbar=no, location=no, menubar=no, resizable=no,toolbar=0 ');</script>";
+        }
+        else{
+            $config['file_name'] = $vereador."_".$nomearquivo.".pdf";
+            $config['upload_path'] = '../camara/content/pedidos_de_providencia/';
+        }
+
+        //FIM
         if(isset($_FILES['arquivo']['name']))
         {
             if(0 < $_FILES['arquivo']['error'])
@@ -55,8 +68,8 @@ class Pedidos extends Geral {
                     }
                     else
                     {
-                        $arquivo = $config['file_name'];
-                        echo $arquivo;
+                        $arquivo = $vereador."_".$nomearquivo.".pdf";
+                        echo $arquivo."<br/>";
                         $this->Pedidos_model->set_pedido("Pedido de Providência: ".$nome,$data,$arquivo);
                         $get_id_arquivo = $this->Pedidos_model->get_id_arquivo($arquivo);
                         foreach ($ver as $vereadores) {

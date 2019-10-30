@@ -7,15 +7,8 @@
 			}
 
 		    public function get_vereador(){
- 
-		      $this->db->select('*');
-		 
-		      $this->db->order_by("nome", "asc");
-		 
-		      
-		 
-		      return $this->db->get('vereadores')->result_array();
-		 
+		      $query = $this->db->query("select * from vereadores v where v.ativo = 1 order by nome asc");
+		      return $query->result_array();
 		    }  
 
 		public function get_providencia($Ids){
@@ -27,8 +20,8 @@
 
 		}
 		public function get_vereadores(){
-		   $this->db->select('*');
-		   return $this->db->get('vereadores')->result_array();
+		    $query = $this->db->query("Select * from vereadores v where v.ativo = 1");
+		    return $query->result_array();
         }
  		public function get_vereadorByid($id1){
  			$this->db->select("*");
@@ -49,6 +42,9 @@
             if (isset($arquivo)) $this->db->set('foto', $arquivo);
             $this->db->where('id', $id);
             $this->db->update('vereadores');
+           }
+           public function desativaVereador($id){
+		    $this->db->query("update vereadores set ativo = 0 where id = $id");
            }
 	}
 

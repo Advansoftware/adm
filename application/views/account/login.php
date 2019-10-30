@@ -8,9 +8,7 @@
             display: flex;
             min-height: 100vh;
             flex-direction: column;
-        }
-        body {
-            background: #adb5bd;
+            background: #f2f4f8;
         }
         .input-field input[type=date]:focus + label,
         .input-field input[type=text]:focus + label,
@@ -39,7 +37,7 @@
                 <div class="card-header bg-info text-center">
                     <img class="img-fluid" style="width: 200px" src="<?= base_url()?>/content/imagens/logo_oficial.png" />
                 </div>
-                <div class="card-body bg-warning text-dark">
+                <div class="card-body bg-light text-dark">
                     <div class="container text-center">
 
                         <div class="row">

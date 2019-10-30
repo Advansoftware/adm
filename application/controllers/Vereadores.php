@@ -13,9 +13,11 @@ class Vereadores extends Geral {
 		$this->load->model('Vereador_model');
         $this->load->model('Partidos_model');
 	}
+	//Estrutura da pagina
 	public function index(){
         $data['partidos'] = $this->Partidos_model->get_partidos();
         $data['vereador'] = $this->Vereador_model->get_vereadores();
+        $data['title'] = "Vereadores";
         $this->inicio($data);
         $this->load->view('vereadores/vereadores');
 	}
@@ -23,17 +25,17 @@ class Vereadores extends Geral {
         $data['partidos'] = $this->Partidos_model->get_partidos();
         //$data['controller'] = 'pedidos';
         $data['title'] = "Criar Vereador";
-        $this->inicio($data);
-        $this->load->view('vereadores/create');
+        $this->load->view('vereadores/create', $data);
     }
     public function edit($id){
         $data['partidos'] = $this->Partidos_model->get_partidos();
         $data['vereador'] = $this->Vereador_model->get_vereadorByid($id);
         //$data['controller'] = 'pedidos';
         $data['title'] = "Alterar Vereador";
-        $this->inicio($data);
-        $this->load->view('vereadores/edit');
+        $this->load->view('vereadores/edit',$data);
     }
+
+    //Ações da pagina
 	public function altera_vereador(){
 		$nome = $this->input->post('nome');
 		$email = $this->input->post('email');
@@ -80,6 +82,10 @@ class Vereadores extends Geral {
             echo 'Por Favor escolha um arquivo';
             $this->Vereador_model->set_vereador($id, $nome, $email, $partido);
         }
+    }
+    public function desativaVereador($id){
+        $this->Vereador_model->desativaVereador($id);
+        redirect("/vereadores");
     }
     public function deletaSessao($id){
         $arquivo = str_replace(" ", "_",  $this->Sessoes_camara_model->getArquivoById($id));
