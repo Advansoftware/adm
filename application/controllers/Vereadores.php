@@ -20,7 +20,7 @@ class Vereadores extends Geral {
         $data['title'] = "Vereadores";
         $this->inicio($data);
         $this->load->view('vereadores/vereadores');
-	}
+	} 
     public function create(){
         $data['partidos'] = $this->Partidos_model->get_partidos();
         //$data['controller'] = 'pedidos';
