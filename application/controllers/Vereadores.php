@@ -13,6 +13,7 @@ class Vereadores extends Geral {
 		$this->load->model('Vereador_model');
         $this->load->model('Partidos_model');
 	}
+	//Estrutura da pagina
 	public function index(){
         $data['partidos'] = $this->Partidos_model->get_partidos();
         $data['vereador'] = $this->Vereador_model->get_vereadores();
@@ -33,6 +34,8 @@ class Vereadores extends Geral {
         $data['title'] = "Alterar Vereador";
         $this->load->view('vereadores/edit',$data);
     }
+
+    //Ações da pagina
 	public function altera_vereador(){
 		$nome = $this->input->post('nome');
 		$email = $this->input->post('email');
