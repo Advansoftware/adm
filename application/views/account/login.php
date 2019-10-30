@@ -62,7 +62,7 @@
                                     <label for="senha" class="col-sm-3 col-form-label">Senha</label>
                                     <input type="password" class="form-control validate col-sm-9" name="senha" id="senha">
                                 </div>
-                                    <button type='submit' name='btn_login' class='btn btn-info w-50 my-3'>Login</button>
+                                    <button type='submit' name='btn_login' class='btn btn-danger w-50 my-3'>Login</button>
                             </div>
                         </div>
                         </form>

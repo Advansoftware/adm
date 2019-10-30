@@ -1,34 +1,53 @@
-<div class="container clearfix mb-5">
-  <h1 class="display-4 text-center col-md-10">Os Vereadores</h1>
-  <div class="row">
-  <div class="col-md-10">
-    <div class="col text-center">
-      <div class="row">
-        <?php foreach ($vereadores as $info) : ?>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+</script>
 
-            <div class="col-lg-3 offset-md-0 mt-3 align-items-center">
-            <div class="card w-100" style="width: 15rem; min-width: 13rem;">
-             <img class="card-img-top" src="<?= base_url() ?>content/imagens/vereadores/<?= $info->foto ?>.jpg" alt="Card image cap">
-              <div class="card-body">
-                  <h5 class="card-title"><?= $info->nome ?></h5>
-                  
-            </div>
-               <ul class="list-group list-group-flush">
-                <?php if($info->partido != null):?>
-                   <li class="list-group-item"><img src="<?= base_url() ?>content/imagens/partidos/<?= $info->partido ?>.png"  height="50px"></li>
-                <?php endif ?>
-
-                <li class="list-group-item" id='ajaxPagination'><a data-toggle="modal" data-target=".bd-example-modal-lg" href="<?= base_url(); ?>vereadores/pedidos/<?= $info->id ?>" class="btn btn-secondary btn-sm">Pedidos de Providência</a></li>
-                <li class="list-group-item"><a href="mailto:<?= $info->email ?>" class="btn btn-info"><i class="fas fa-envelope"></i> Enviar Email</a></li>
-              </ul>
-            </div>
-          </div>
-
-      <?php endforeach ?>
-      </div>
+<div class="container">
+    <div class="row mt-2 d-flex justify-content-end">
+        <div class="col-md-3 col-sm-12 my-3">
+            <a href="<?=base_url()?>vereadores/create" class="btn btn-primary btn-block">Adicionar Vereador</a>
+        </div>
     </div>
-  </div>
-   <?= loadMenus() ?>
-</div>
- 
+	<div class="row mt-2">
+		<div class="col s12 offsset-s2">
+			<table id="example" class="table table-striped table-bordered">
+        <thead>
+          <tr>
+          	<th colspan="3">Ultimos Adicionados</th>
+          </tr>
+          <tr>
+              <th>Nome</th>
+              <th>Partido</th>
+              <th>Logo Partido</th>
+              <th>Ação</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        	<?php foreach($vereador as $vereadores): ?>
+            <?php
+                if($vereadores['partido']>0) $pega = $vereadores['partido']-1;
+                else $pega = $vereadores['partido'];
+            ?>
+          <tr>
+            <td><?= $vereadores['nome']?></td>
+            <td><?=$partidos[$pega]['nome']; ?></td>
+            <td></td>
+            <td><div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+              <div class="btn-group" role="group" aria-label="First group">
+                  <button type="button" class="btn btn-primary" onclick="window.location.href='<?=base_url();?>vereadores/edit/<?=$vereadores['id']?>'"><i class="far fa-edit"></i></button>
+                  <button id="delSessao" type="button" onclick="" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+              </div>
+            </div>
+            </td>
+          </tr>
+      <?php endforeach;?>
+        </tbody>
+      </table>
+		</div>
+	</div>
 </div>

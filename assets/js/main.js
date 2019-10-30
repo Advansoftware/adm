@@ -264,6 +264,52 @@ var Main = {
             });
         }
 
+    },
+    preview_foto : function () {
+        var file = $(this).parents().find(".file");
+        file.trigger("click");
+    },
+    altera_foto_preview : function () {
+        var fileName = e.target.files[0].name;
+        $("#file").val(fileName);
+
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            // get loaded data and render thumbnail.
+            document.getElementById("preview").src = e.target.result;
+        };
+        // read the image file as a data URL.
+        reader.readAsDataURL(this.files[0]);
+    },
+    altera_vereador : function(){
+        var nome = $("#nome").val();
+        var email = $("#email").val();
+        var partido = $("#partido").val();
+        var id = $("#id").val();
+        var file_data = $('#file').prop('files')[0];
+        var fd = new FormData();
+        fd.append('arquivo',file_data);
+        fd.append('nome',nome);
+        fd.append('email',email);
+        fd.append('partido',partido);
+        fd.append('id',id);
+        if(nome != '' && partido != '' && email != '', id!='') {
+            $.ajax({
+                method: "POST",
+                url: Main.base_url + "vereadores/altera_vereador",
+                dataType: 'text',
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: fd,
+                type: 'post'
+            }).done(function (html) {
+                window.location.href = Main.base_url + "vereadores";
+            });
+        }
+        else{
+            alert("Falta Preencher alguns dados");
+        }
     }
 
 }
