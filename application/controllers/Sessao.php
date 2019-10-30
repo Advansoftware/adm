@@ -17,7 +17,7 @@ class Sessao extends Geral {
 		$data['pedidos'] = $this->Sessoes_camara_model->get_sessao();
 		$data['lista_categoria'] = $this->Sessoes_camara_model->get_categoria();
 		$data['controller'] = 'pedidos';
-		$data['title'] = "Pedidos";
+		$data['title'] = "Sessão";
 		$this->inicio($data);
 		$this->load->view('sessao/create_edit');
 		$this->load->view('sessao/sessao');

@@ -1,62 +1,49 @@
 <div class="container my-3">
-    <div class="row">
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title text-center"><?=$title?></h3>
-                    <hr>
-                    <div class="container"></div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="card-body text-center">
-
-                                        <!--local para imagem do vereador-->
-                                        <div id="partido_logo"><img src="../../../git/camara/content/imagens/px.png" id="preview" class="img-fluid w-25">
-                                            <br />
-                                            <img src="../../../git/camara/content/imagens/user.png" id="preview" class="img-thumbnail">
-                                        </div>
-                                    </div>
-                                </div>
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-body text-center bg-imagem-fundo">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <!--local para imagem do vereador-->
+                            <div id="partido_logo"><img src="../../../git/camara/content/imagens/px.png" id="preview" class="img-fluid w-25 ">
+                                <br />
+                                <img src="../../../git/camara/content/imagens/user.png" id="preview" class="img-thumbnail rounded-pill w-50 mx-auto d-block ">
                             </div>
-
-                            <div class="col-md-8">
-                               <!--formularios-->
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-12">
+                                <!--formularios-->
                                 <input type="hidden" name="id" id="id" value=""/>
-                                <input type="file" name="file" id="file" class="file form-control">
+                                <input type="file" name="file" id="file" class="file mb-4 form-control">
                                 <div class="form-group">
-                                    <label for="nome">Nome: </label>
-                                    <input type="text" id="nome" value="" class="form-control" placeholder="Nome">
+                                    <input type="text" id="nome" value="" class="form-control my-auto" placeholder="Nome">
                                 </div>
                                 <div class="form-group">
-                                    <label for="email">E-mail</label>
-                                    <input type="email" id="email" value="" class="form-control" placeholder="E-mail"/>
+                                    <input type="email" id="email" value="" class="form-control my-auto" placeholder="E-mail"/>
                                 </div>
                                 <div class="form-group">
-                                    <label for="partido">Partido</label>
-
-                                    <select name="partido" id="partido" class="form-control">
+                                    <select name="partido" id="partido" class="form-control my-auto">
                                         <option selected disabled >Selecione um partido</option>
 
                                         <?php foreach ($partidos as $partido):?>
 
-                                        <option value="<?=$partido['id']?>"><?=$partido['nome']?></option>
+                                            <option value="<?=$partido['id']?>"><?=$partido['nome']?></option>
                                         <?php endforeach;?>
 
                                     </select>
                                 </div>
                             </div>
-
-                        </div>
-                        <!--botão que envia os formularios-->
-                        <div class="row">
-                            <div class="col-md-4">
-                                <button class="btn btn-primary btn-block" onclick="">Enviar</button>
                             </div>
                         </div>
+                    <div class="row">
+                        <div class="col-12  mx-auto">
+                            <button class="btn btn-primary btn-block" onclick="">Enviar</button>
+                        </div>
                     </div>
-
+                    </div>
                 </div>
-            </div>
+
+        </div>
     </div>
 </div>

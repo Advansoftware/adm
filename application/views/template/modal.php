@@ -57,12 +57,12 @@
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header" style="background: rgb(241,193,0); padding-bottom: 0px;">
-				<h5 class="modal-title text-white w-100" id="header_large"></h5>
+				<h5 class="modal-title text-center w-100 mb-3" id="header_large"></h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<div id="mensagem_large" class="modal-body" style="overflow: auto; height: 100%;">
+			<div id="mensagem_large" class="modal-body bg-primary" style="overflow: auto; height: 100%;">
 				Aguarde...
 			</div>
 		</div>

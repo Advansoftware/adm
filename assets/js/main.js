@@ -170,9 +170,10 @@ var Main = {
     logout : function (){
         Main.modal("aguardar", "Aguarde... encerrando sessão");
     },
-    modal : function(tipo, mensagem)
+    modal : function(tipo, mensagem, title=null)
     {
         $("#mensagem_"+tipo).html(mensagem);
+        $("#header_large").text(title);
         $('#modal_'+tipo).modal({
             keyboard: true,
             backdrop : 'static',
@@ -189,6 +190,10 @@ var Main = {
             $('#modal_confirm').on('shown.bs.modal', function () {
                 $('#bt_confirm_modal').trigger('focus')
             })
+        }
+        else if(tipo == "large")
+        {
+            $('#modal_large').on('shown.bs.modal', function () {})
         }
     },
     limpa_login : function ()
@@ -320,6 +325,13 @@ var Main = {
             window.location.href = Main.base_url + "vereadores/desativaVereador/" + id;
         });
     },
-
+    EditaVereador: function (id) {
+        Main.modal("large", '', 'Alterar Vereador');
+        $("#mensagem_large").load(Main.base_url + "vereadores/edit/"+id);
+    },
+    CriaVereador: function () {
+        Main.modal("large", '', 'Criar Vereador');
+        $("#mensagem_large").load(Main.base_url + "vereadores/create");
+    }
 }
 
