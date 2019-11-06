@@ -8,6 +8,7 @@
 		public function __construct()
 		{
 			parent::__construct();
+			$this->load->model('Account_model');
 			$this->load->helper('url_helper');
 			$this->load->helper('url');
 			$this->load->helper('html');

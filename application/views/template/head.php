@@ -12,20 +12,26 @@
 		<?= link_tag('assets/css/dash.css') ?>
 		<?= link_tag('assets/css/all.css') ?>
 		<?= link_tag('https://wrappixel.com/demos/admin-templates/material-pro/minisidebar/css/style.css') ?>
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+
 		<?= link_tag('content/imagens/logo_oficial.jpg', 'shortcut icon', 'image/png') ?>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-		<script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/init.js'></script>
-		<script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/main.js'></script>
-		<script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/jquery.mask.min.js'></script>
-        <script type="text/javascript" language="javascript" src='<?php echo base_url();?>ckeditor/ckeditor.js'></script>
-        <script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/all.js'></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 	</head>
 <body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/init.js'></script>
+<script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/main.js'></script>
+<script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/jquery.mask.min.js'></script>
+<script type="text/javascript" language="javascript" src='<?php echo base_url();?>ckeditor/ckeditor.js'></script>
+<script type="text/javascript" language="javascript" src='<?php echo base_url();?>assets/js/all.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
 <?php
 $this->load->view('template/modal');
 ?>

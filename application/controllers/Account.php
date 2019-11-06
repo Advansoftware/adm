@@ -29,7 +29,6 @@ class Account extends Geral {
     {
         $email = $this->input->post('email');
         $senha = $this->input->post('password');
-
         $login = $this->Account_model->valida_login($email);
         $data['title'] = 'Login';
 

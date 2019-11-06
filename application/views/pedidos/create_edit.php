@@ -1,3 +1,8 @@
+<script>
+    $(document).ready(function() {
+        $('#vereadores').select2();
+    } );
+</script>
 <div class="container my-3">
 <form method="post" enctype="multipart/form-data">
     <div class="row">

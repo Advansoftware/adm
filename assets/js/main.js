@@ -3,10 +3,8 @@ var Main = {
 	carrega : function(){
         $('#numero').mask('00/0000', {reverse: true});
 	    $('#data').mask('00/00/0000', {reverse: true});
-        $('#vereadores').select2();
 	},
 	envia_pedido : function(){
-
         var vereadores = $("#vereadores").val();
         var nome_pedido = $("#numero").val();
         var data_pedido  = $("#data").val();
@@ -145,21 +143,19 @@ var Main = {
         {
             Main.modal("aguardar","Aguarde... validando seus dados.");
             $.ajax({
-                url: Url.base_url+'account/validar',
+                method: "POST",
+                url: Main.base_url+'account/validar',
                 data: $("#form_login").serialize(),
                 dataType:'json',
                 cache: false,
                 type: 'POST',
-                success: function (msg) {
-                    if(msg.response == "valido")
-                    {
-                        window.location.assign(Url.base_url + "pedidos");
-                    }
-                    else
-                    {
-                        setTimeout(function(){
-                            $('#modal_aguardar').modal('hide');
-                        },500);
+                success : function (msg) {
+                if (msg.response == "valido") {
+                    window.location.assign(Main.base_url + "pedidos");
+                } else {
+                    setTimeout(function () {
+                        $('#modal_aguardar').modal('hide');
+                    }, 500);
                         Main.limpa_login();
                         Main.modal("aviso", msg.response);
                     }

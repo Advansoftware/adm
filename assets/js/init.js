@@ -15,7 +15,7 @@ $(document).ready(function(){
         }
     });
 
-    $('#password').blur(function() {
+    $('#senha').blur(function() {
         if (this.value != '') Main.show_error("password", '', '');
     });
 
