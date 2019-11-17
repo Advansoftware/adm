@@ -5,10 +5,24 @@
         {
             $this->load->database();
         }
-        public function  get_partidos()
+        public function get_partidos($page = false)
         {
-            $query = $this->db->query("Select * from partidos");
-		    return $query->result_array();
+            $limit = $page * ITENS_POR_PAGINA;
+            $inicio = $limit - ITENS_POR_PAGINA;
+            $step = ITENS_POR_PAGINA;
+
+            $pagination = " LIMIT ".$inicio.",".$step;
+            if ($page === false) {
+                $pagination = "";
+            }
+
+            $query = $this->db->query("
+                SELECT COUNT(*) OVER() AS Size, id, nome, imagem
+                from partidos 
+                ".$pagination."
+            ");
+
+            return $query->result_array();
         }
         public  function  set_partidos($nome,$imagem)
         {

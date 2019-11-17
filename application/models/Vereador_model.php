@@ -19,8 +19,22 @@
 			return $query->result_array();
 
 		}
-		public function get_vereadores(){
-		    $query = $this->db->query("Select * from vereadores v where v.ativo = 1");
+
+		public function get_vereadores($page = false)
+		{
+			$limit = $page * ITENS_POR_PAGINA;
+			$inicio = $limit - ITENS_POR_PAGINA;
+			$step = ITENS_POR_PAGINA;
+
+			$pagination = " LIMIT ".$inicio.",".$step;
+			if ($page === false) {
+				$pagination = "";
+			}
+
+		    $query = $this->db->query("
+		    	select COUNT(*) OVER() AS Size, id, foto, nome, partido, email, biografia 
+		    	from vereadores v where v.ativo = 1 ".$pagination."");
+
 		    return $query->result_array();
         }
  		public function get_vereadorByid($id1){

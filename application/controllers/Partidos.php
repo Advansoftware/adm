@@ -14,11 +14,15 @@ class Partidos extends Geral
         $this->load->model('Partidos_model');
     }
 
-    public function index()
+    public function index($page = 1)
     {
-        $data['partidos'] = $this->Partidos_model->get_partidos();
-        $data['title'] = "Partidos";
-        $this->inicio($data);
+        $this->data['partidos'] = $this->Partidos_model->get_partidos($page);
+         $this->data['paginacao']['size'] = (!empty($this->data['partidos']) ? $this->data['partidos'][0]['Size'] : 0);
+        $this->data['paginacao']['pg_atual'] = $page;
+
+        $this->data['title'] = "Partidos";
+        $this->data['controller'] = 'partidos';
+        $this->inicio();
         $this->load->view('partido/create_edit');
         $this->load->view('partido/partidos');
     }

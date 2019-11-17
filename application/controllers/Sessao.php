@@ -13,12 +13,16 @@ class Sessao extends Geral {
 		//$this->load->model('Vereador_model');
 		$this->load->model('Sessoes_camara_model');
 	}
-	public function index(){
-		$data['pedidos'] = $this->Sessoes_camara_model->get_sessao();
-		$data['lista_categoria'] = $this->Sessoes_camara_model->get_categoria();
-		$data['controller'] = 'pedidos';
-		$data['title'] = "Sessão";
-		$this->inicio($data);
+	public function index($page = 1)
+    {
+		$this->data['sessoes'] = $this->Sessoes_camara_model->get_sessao($page);
+        $this->data['paginacao']['size'] = (!empty($this->data['sessoes']) ? $this->data['sessoes'][0]['Size'] : 0);
+        $this->data['paginacao']['pg_atual'] = $page;
+
+		$this->data['lista_categoria'] = $this->Sessoes_camara_model->get_categoria();
+		$this->data['controller'] = 'sessao';
+		$this->data['title'] = "Sessão";
+		$this->inicio();
 		$this->load->view('sessao/create_edit');
 		$this->load->view('sessao/sessao');
 	}

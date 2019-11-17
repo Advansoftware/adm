@@ -14,11 +14,17 @@ class Vereadores extends Geral {
         $this->load->model('Partidos_model');
 	}
 	//Estrutura da pagina
-	public function index(){
-        $data['partidos'] = $this->Partidos_model->get_partidos();
-        $data['vereador'] = $this->Vereador_model->get_vereadores();
-        $data['title'] = "Vereadores";
-        $this->inicio($data);
+	public function index($page = 1)
+    {
+        $this->data['partidos'] = $this->Partidos_model->get_partidos();
+        
+        $this->data['vereador'] = $this->Vereador_model->get_vereadores($page);
+        $this->data['paginacao']['size'] = (!empty($this->data['vereador']) ? $this->data['vereador'][0]['Size'] : 0);
+        $this->data['paginacao']['pg_atual'] = $page;
+
+        $this->data['title'] = "Vereadores";
+        $this->data['controller'] = 'vereadores';
+        $this->inicio();
         $this->load->view('vereadores/vereadores');
 	} 
     public function create(){

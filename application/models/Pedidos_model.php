@@ -2,17 +2,33 @@
 	class Pedidos_model extends CI_Model {
 		
 		public function __construct()
-			{
-				$this->load->database();
+		{
+			$this->load->database();
+		}
+		public function get_vereador_pedidos($page = false)
+		{
+			$limit = $page * ITENS_POR_PAGINA;
+			$inicio = $limit - ITENS_POR_PAGINA;
+			$step = ITENS_POR_PAGINA;
+
+			$pagination = " LIMIT ".$inicio.",".$step;
+			if ($page === false) {
+				$pagination = "";
 			}
-		public function get_vereador_pedidos(){
-			$query = $this->db->query("SELECT p.id as id, p.nome as nome_pedido, p.data_publicacao as data_pedido, v.nome as nome_vereador
+
+			$query = $this->db->query("
+				SELECT COUNT(*) OVER() AS Size,
+				p.id as id, p.nome as nome_pedido, p.data_publicacao as data_pedido, v.nome as nome_vereador
 				from pedidos p INNER JOIN vereador_pedido vp on p.id = vp.id_pedido
-				INNER JOIN vereadores v on v.id = vp.id_vereador where v.ativo = 1 order by p.id desc");
+				INNER JOIN vereadores v on v.id = vp.id_vereador where v.ativo = 1 order by p.id asc 
+				".$pagination."
+				");
+
 			return $query->result_array();
 		}
 		//Consulta que retorna quais vereadores estão ligados em cada pedido
-		public  function  get_dados_ligados_vereador_pedidosById($id){
+		public  function  get_dados_ligados_vereador_pedidosById($id)
+		{
 		    $query = $this->query("SELECT * FROM vereador_pedido vp INNER JOIN vereadores v on v.id = vp.id_vereador WHERE vp.id_pedido = $id");
         }
 		public function set_pedido($nome,$datas,$arquivo){

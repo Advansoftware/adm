@@ -12,12 +12,18 @@ class Pedidos extends Geral {
 		$this->load->model('Vereador_model');
 		$this->load->model('Pedidos_model');
 	}
-	public function index(){
-		$data['pedidos'] = $this->Pedidos_model->get_vereador_pedidos();
-		$data['lista_vereador'] = $this->Vereador_model->get_vereador();
-		$data['controller'] = 'pedidos';
-		$data['title'] = "Pedidos";
-		$this->inicio($data);
+	public function index($page = 1)
+    {
+		$this->data['pedidos'] = $this->Pedidos_model->get_vereador_pedidos($page);
+        //$data['paginacao']['method'] = "index2";
+        $this->data['paginacao']['size'] = (!empty($this->data['pedidos']) ? $this->data['pedidos'][0]['Size'] : 0);
+        $this->data['paginacao']['pg_atual'] = $page;
+
+		$this->data['lista_vereador'] = $this->Vereador_model->get_vereador();
+		$this->data['controller'] = 'pedidos';
+		$this->data['title'] = "Pedidos";
+
+		$this->inicio();
 		$this->load->view('pedidos/create_edit');
 		$this->load->view('pedidos/pedidos');
 	}

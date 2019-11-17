@@ -2,17 +2,22 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 require_once("Geral.php");
 
-class Noticias extends Geral {
+class Noticias extends Geral
+{
     public function __construct()
     {
         parent::__construct();
        $this->load->model('Noticias_model');
     }
-    public function index(){
-        $data["noticias"] = $this->Noticias_model->get_noticias();
-        $data['controller'] = 'noticias';
-        $data['title'] = "Criar Noticia";
-        $this->inicio($data);
+    public function index($page = 1)
+    {
+        $this->data["noticias"] = $this->Noticias_model->get_noticias($page);
+        $this->data['paginacao']['size'] = (!empty($this->data['noticias']) ? $this->data['noticias'][0]['Size'] : 0);
+        $this->data['paginacao']['pg_atual'] = $page;
+
+        $this->data['controller'] = 'noticias';
+        $this->data['title'] = "Criar Noticia";
+        $this->inicio();
         $this->load->view('noticias/noticias');
     }
     public function create(){

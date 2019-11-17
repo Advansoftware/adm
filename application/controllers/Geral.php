@@ -8,6 +8,7 @@
 		public function __construct()
 		{
 			parent::__construct();
+			define("ITENS_POR_PAGINA", 10);
 			$this->load->model('Account_model');
 			$this->load->helper('url_helper');
 			$this->load->helper('url');
@@ -17,6 +18,8 @@
 			$this->load->library('session');
 			$this->load->helper('cookie');
 			$this->data['url'] = base_url();
+			$this->data['paginacao']['url'] = base_url();
+			$this->data['paginacao']['itens_por_pagina'] = ITENS_POR_PAGINA;
 		}
 		/*!
 		*	RESPONSÁVEL POR CONVERTER UMA DATA DE UM FORMATO PARA OUTRO.
@@ -45,8 +48,9 @@
 			}
 			return $dataTemp;
 		}
-		public function inicio($dados=null){
-			$this->load->view('template/head', $dados);
+		public function inicio()
+		{
+			$this->load->view('template/head', $this->data);
 			$this->load->view('template/menu');
 		}
         public function hashing($data)
