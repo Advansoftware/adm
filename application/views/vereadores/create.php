@@ -38,7 +38,7 @@
                         </div>
                     <div class="row">
                         <div class="col-12  mx-auto">
-                            <button class="btn btn-primary btn-block" onclick="">Enviar</button>
+                            <button class="btn btn-primary btn-block" onclick="Main.cria_vereador()">Enviar</button>
                         </div>
                     </div>
                     </div>

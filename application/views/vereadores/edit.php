@@ -8,9 +8,9 @@
                         <div class="col-12">
                             <!--local para imagem do vereador-->
                             <div id="partido_logo">
-                                <img src="../../git/camara/content/imagens/partidos/<?php if($vereador[0]->partido>0) echo $partidos[$vereador[0]->partido-1]['imagem'];?>" id="preview" style="max-height: 5rem; max-width: 7rem" class="img-fluid bg-png-shadow-white mb-3">
+                                <img src="<?=URLCAMARA?>/content/imagens/partidos/<?php echo $vereador[0]->imagem;?>" id="preview" style="max-height: 5rem; max-width: 7rem" class="img-fluid bg-png-shadow-white mb-3">
                                 <br />
-                                <img src="../../git/camara/content/imagens/vereadores/<?=$vereador[0]->foto?>.jpg" id="preview" class="img-thumbnail rounded-pill w-50 mx-auto d-block ">
+                                <img src="<?=URLCAMARA?>/content/imagens/vereadores/<?=$vereador[0]->foto?>.jpg" id="preview" class="img-thumbnail rounded-pill w-50 mx-auto d-block ">
                             </div>
                         </div>
                         <div class="row my-3">

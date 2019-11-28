@@ -1,4 +1,5 @@
 <?php
+const URLCAMARA = "http://localhost/git/camara";
 	class Geral extends CI_Controller 
 	{
 		protected $data;

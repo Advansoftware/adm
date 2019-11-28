@@ -20,16 +20,11 @@
               <th>Ação</th>
           </tr>
         </thead>
-
         <tbody>
         	<?php foreach($vereador as $vereadores): ?>
-            <?php
-                if($vereadores['partido']>0) $pega = $vereadores['partido']-1;
-                else $pega = $vereadores['partido'];
-            ?>
           <tr>
             <td><?= $vereadores['nome']?></td>
-            <td><?=$partidos[$pega]['nome']; ?></td>
+            <td><?=$vereadores['partidoNome']; ?></td>
             <td></td>
             <td><div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
               <div class="btn-group" role="group" aria-label="First group">

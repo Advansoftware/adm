@@ -16,8 +16,6 @@ class Vereadores extends Geral {
 	//Estrutura da pagina
 	public function index($page = 1)
     {
-        $this->data['partidos'] = $this->Partidos_model->get_partidos();
-        
         $this->data['vereador'] = $this->Vereador_model->get_vereadores($page);
         $this->data['paginacao']['size'] = (!empty($this->data['vereador']) ? $this->data['vereador'][0]['Size'] : 0);
         $this->data['paginacao']['pg_atual'] = $page;
@@ -42,6 +40,52 @@ class Vereadores extends Geral {
     }
 
     //Ações da pagina
+    public function cria_vereador(){
+		$nome = $this->input->post('nome');
+		$email = $this->input->post('email');
+		$partido = $this->input->post('partido');
+        $nomearquivo = strtolower (str_replace(" ", "_", "$nome"));
+        //upload file
+        $config['allowed_types'] = '*';
+        $config['max_filename'] = '255';
+        $config['max_size'] = '51200'; //50 MB
+        $config['file_name'] = $nomearquivo;
+        if(isset($_FILES['arquivo']['name']))
+        {
+            if(0 < $_FILES['arquivo']['error'])
+            {
+                echo 'Erro ao enviar o arquivo';
+            }
+            else
+            {
+                $config['upload_path'] = '../camara/content/imagens/vereadores/';
+                if(file_exists("../camara/content/imagens/vereadores/".$config['file_name']))
+                {
+                    echo "Arquivo Ja Existe.";
+                }
+                else
+                {
+                    $this->load->library('upload', $config);
+                    if (!$this->upload->do_upload('arquivo'))
+                    {
+                        echo $this->upload->display_errors();
+                    }
+                    else
+                    {
+                        //salva o arquivo no banco de dados
+                        $arquivo = $nomearquivo;
+                        echo $arquivo;
+                        $this->Vereador_model->set_NewVereador($nome, $email, $partido, $arquivo);
+                        echo "Enviado com sucesso.";
+                    }
+                }
+            }
+        }
+        else {
+            echo 'Por Favor escolha um arquivo';
+            $this->Vereador_model->set_NewVereador($nome, $email, $partido);
+        }
+    }
 	public function altera_vereador(){
 		$nome = $this->input->post('nome');
 		$email = $this->input->post('email');

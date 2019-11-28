@@ -32,15 +32,15 @@
 			}
 
 		    $query = $this->db->query("
-		    	select COUNT(*) OVER() AS Size, id, foto, nome, partido, email, biografia 
-		    	from vereadores v where v.ativo = 1 ".$pagination."");
+		    	select COUNT(*) OVER() AS Size, id, foto, nome, partido, email, biografia, imagem, partidoNome 
+		    	from partidovereador v where v.ativo = 1 ".$pagination."");
 
 		    return $query->result_array();
         }
  		public function get_vereadorByid($id1){
  			$this->db->select("*");
  			$this->db->where("id", $id1);
- 			return $this->db->get("vereadores")->result();
+ 			return $this->db->get("partidovereador")->result();
  		}
  		//para os pedidos por vereadores
 
@@ -56,6 +56,18 @@
             if (isset($arquivo)) $this->db->set('foto', $arquivo);
             $this->db->where('id', $id);
             $this->db->update('vereadores');
+		   }
+		   public function set_NewVereador($nome, $email, $partido, $arquivo=null){
+			if (isset($arquivo)) {
+				$fotos = ", foto";
+				$arquivos = ", '$arquivo'";
+			}
+			else{
+				$fotos = '';
+				$arquivos = '';
+			}
+			$this->db->query("insert into vereadores (nome, email, partido$fotos) values ('$nome', '$email', '$partido' $arquivos)"); 
+
            }
            public function desativaVereador($id){
 		    $this->db->query("update vereadores set ativo = 0 where id = $id");

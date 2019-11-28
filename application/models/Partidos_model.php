@@ -18,7 +18,7 @@
 
             $query = $this->db->query("
                 SELECT COUNT(*) OVER() AS Size, id, nome, imagem
-                from partidos 
+                from partidos
                 ".$pagination."
             ");
 
